@@ -506,9 +506,69 @@ h3 {
   font-weight: 800;
 }
 
+.people-list a,
+.news-list h3 a,
+.news-grid h3 a {
+  color: inherit;
+  text-decoration-color: var(--asu-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.people-list a:hover,
+.news-list h3 a:hover,
+.news-grid h3 a:hover {
+  color: var(--asu-maroon);
+}
+
 .people-list small {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.detail-shell {
+  width: min(920px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.detail-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  padding: 1.5rem;
+}
+
+.detail-card + .detail-card {
+  margin-top: 1rem;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-meta li {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--soft);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.detail-card p,
+.detail-card li {
+  color: var(--muted);
+}
+
+.detail-card ul {
+  padding-left: 1.1rem;
+  margin-bottom: 0;
 }
 
 .publication-list {

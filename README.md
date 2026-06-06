@@ -11,6 +11,8 @@ Static multi-page lab website for the Di Liu Lab at Arizona State University, th
 - `news.html`: lab news archive
 - `opportunities.html`: joining the lab
 - `contact.html`: contact, teaching, and external links
+- `people/`: individual lab member profile pages
+- `news/`: individual news article pages
 
 ## Local Preview
 

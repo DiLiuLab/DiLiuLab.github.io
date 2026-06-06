@@ -22,11 +22,17 @@ if (navToggle && navLinks) {
 }
 
 const trackedLinks = Array.from(document.querySelectorAll(".nav-links a"));
-const currentPage = window.location.pathname.split("/").pop() || "index.html";
+const currentPath = window.location.pathname;
+const currentPage = currentPath.split("/").pop() || "index.html";
+const currentSection = currentPath.includes("/people/")
+  ? "people.html"
+  : currentPath.includes("/news/")
+    ? "news.html"
+    : currentPage;
 
 trackedLinks.forEach((link) => {
-  const linkPage = link.getAttribute("href").split("#")[0] || "index.html";
-  const isCurrent = linkPage === currentPage;
+  const linkPage = (link.getAttribute("href").split("#")[0] || "index.html").split("/").pop();
+  const isCurrent = linkPage === currentSection;
   link.classList.toggle("is-active", isCurrent);
   if (isCurrent) {
     link.setAttribute("aria-current", "page");
