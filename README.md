@@ -1,6 +1,15 @@
 # Di Liu Lab Website
 
-Static lab website for the Di Liu Lab at Arizona State University, themed around nucleic acid engineering.
+Static multi-page lab website for the Di Liu Lab at Arizona State University, themed around nucleic acid engineering.
+
+## Structure
+
+- `index.html`: compact home page and site directory
+- `research.html`: research directions
+- `people.html`: lab members and PI profile links
+- `publications.html`: selected publications
+- `opportunities.html`: joining the lab
+- `contact.html`: contact, teaching, and external links
 
 ## Local Preview
 

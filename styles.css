@@ -169,6 +169,10 @@ a {
   background: linear-gradient(90deg, #fff 0%, #fff 42%, rgba(255, 255, 255, 0.82) 60%, rgba(255, 255, 255, 0.5) 100%);
 }
 
+.home-hero {
+  min-height: min(720px, calc(100vh - 72px));
+}
+
 .hero-media {
   position: absolute;
   inset: 0;
@@ -239,6 +243,25 @@ h3 {
   max-width: 600px;
   color: var(--muted);
   font-size: 1.18rem;
+}
+
+.page-hero {
+  background:
+    linear-gradient(135deg, rgba(140, 29, 64, 0.06), rgba(29, 133, 140, 0.08)),
+    var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-hero h1 {
+  max-width: 860px;
+  font-size: clamp(2.5rem, 6vw, 4.65rem);
+}
+
+.compact-heading p {
+  max-width: 720px;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 1.08rem;
 }
 
 .hero-actions {
@@ -329,7 +352,8 @@ h3 {
 
 .research-grid,
 .join-grid,
-.news-grid {
+.news-grid,
+.link-grid {
   width: min(var(--max), calc(100% - 2rem));
   margin: 0 auto;
   display: grid;
@@ -337,7 +361,12 @@ h3 {
   gap: 1rem;
 }
 
+.link-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .research-card,
+.summary-card,
 .join-grid article,
 .news-grid article,
 .people-groups article,
@@ -351,6 +380,24 @@ h3 {
 .research-card {
   padding: 1.4rem;
   box-shadow: 0 1px 0 rgba(24, 32, 42, 0.03);
+}
+
+.summary-card {
+  min-height: 220px;
+  padding: 1.35rem;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.summary-card:hover {
+  border-color: rgba(140, 29, 64, 0.45);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.summary-card p {
+  color: var(--muted);
 }
 
 .card-index {
@@ -410,6 +457,10 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+}
+
+.roomy-links {
+  margin-top: 1.5rem;
 }
 
 .profile-links a,
@@ -622,6 +673,10 @@ h3 {
     padding-top: 5rem;
   }
 
+  .home-hero {
+    min-height: 680px;
+  }
+
   .hero-media img {
     object-position: 58% center;
   }
@@ -636,6 +691,7 @@ h3 {
   .research-grid,
   .join-grid,
   .news-grid,
+  .link-grid,
   .team-layout,
   .split,
   .contact-band {
@@ -661,8 +717,16 @@ h3 {
     min-height: 720px;
   }
 
+  .home-hero {
+    min-height: 620px;
+  }
+
   h1 {
     font-size: clamp(2.45rem, 12vw, 3.55rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
   }
 
   h2 {

@@ -22,8 +22,21 @@ if (navToggle && navLinks) {
 }
 
 const trackedLinks = Array.from(document.querySelectorAll(".nav-links a"));
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+trackedLinks.forEach((link) => {
+  const linkPage = link.getAttribute("href").split("#")[0] || "index.html";
+  const isCurrent = linkPage === currentPage;
+  link.classList.toggle("is-active", isCurrent);
+  if (isCurrent) {
+    link.setAttribute("aria-current", "page");
+  }
+});
+
 const trackedSections = trackedLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
+  .map((link) => link.getAttribute("href"))
+  .filter((href) => href && href.startsWith("#"))
+  .map((href) => document.querySelector(href))
   .filter(Boolean);
 
 const updateHeader = () => {
@@ -31,18 +44,20 @@ const updateHeader = () => {
   header.toggleAttribute("data-scrolled", window.scrollY > 8);
 };
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      trackedLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+if (trackedSections.length > 0) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        trackedLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
       });
-    });
-  },
-  { rootMargin: "-25% 0px -60% 0px", threshold: 0.01 }
-);
+    },
+    { rootMargin: "-25% 0px -60% 0px", threshold: 0.01 }
+  );
 
-trackedSections.forEach((section) => observer.observe(section));
+  trackedSections.forEach((section) => observer.observe(section));
+}
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
