@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Di Liu Lab nucleic acid engineering mark">
-  <rect width="64" height="64" rx="12" fill="#18202a"/>
-  <path d="M18 11C45 19 45 45 18 53" fill="none" stroke="#d75b82" stroke-width="7" stroke-linecap="round"/>
-  <path d="M46 11C19 19 19 45 46 53" fill="none" stroke="#56c3ca" stroke-width="7" stroke-linecap="round"/>
-  <path d="M22 20h20M25 32h14M22 44h20" fill="none" stroke="#ffc627" stroke-width="4" stroke-linecap="round"/>
-</svg>
