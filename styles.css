@@ -449,6 +449,13 @@ h3 {
   font-size: 1.5rem;
 }
 
+.avatar-image {
+  width: 96px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .role {
   font-weight: 700;
 }
@@ -536,6 +543,20 @@ h3 {
   border-radius: var(--radius);
   background: #fff;
   padding: 1.5rem;
+}
+
+.detail-image {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  margin-bottom: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.person-image {
+  width: min(260px, 100%);
+  aspect-ratio: 1;
 }
 
 .detail-card + .detail-card {

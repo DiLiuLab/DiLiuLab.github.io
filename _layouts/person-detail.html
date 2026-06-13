@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section class="page-hero section-pad" id="top">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">{{ page.role_label }}</p>
+    <h1>{{ page.name }}</h1>
+    {% if page.role %}<p>{{ page.role }}{% if page.years %}, {{ page.years }}{% endif %}.</p>{% endif %}
+  </div>
+</section>
+<section class="section section-pad{% if page.tinted %} tinted{% endif %}">
+  <div class="detail-shell">
+    <article class="detail-card">
+      {% if page.image %}
+      <img class="detail-image person-image" src="{{ page.image | relative_url }}" alt="{{ page.name | escape }}">
+      {% endif %}
+      {% if page.interests %}
+      <ul class="detail-meta">
+        {% for interest in page.interests %}
+        <li>{{ interest }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {{ content }}
+      <div class="profile-links roomy-links">
+        <a href="{{ '/people.html' | relative_url }}">Back to people</a>
+        {% for link in page.links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </article>
+  </div>
+</section>

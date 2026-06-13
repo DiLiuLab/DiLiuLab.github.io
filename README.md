@@ -1,41 +1,49 @@
 # Di Liu Lab Website
 
-Static multi-page lab website for the Di Liu Lab at Arizona State University, themed around nucleic acid engineering.
+Jekyll-based lab website for the Di Liu Lab at Arizona State University. The
+public site is hosted by GitHub Pages at <https://diliulab.github.io/>.
 
-## Structure
+## Editing With Pages CMS
 
-- `index.html`: compact home page and site directory
-- `research.html`: research directions
-- `people.html`: lab members and PI profile links
-- `publications.html`: selected publications
-- `news.html`: lab news archive
-- `opportunities.html`: joining the lab
-- `contact.html`: contact, teaching, and external links
-- `people/`: individual lab member profile pages
-- `news/`: individual news article pages
+Routine content can be edited without touching HTML:
+
+1. Visit <https://app.pagescms.org/>.
+2. Sign in with the GitHub account that has access to the `DiLiuLab` organization.
+3. Authorize Pages CMS for the `DiLiuLab/DiLiuLab.github.io` repository if prompted.
+4. Select the repository and the `main` branch.
+5. Edit content under **News & People** or **Site Content**.
+6. Save the entry. Pages CMS commits the change to GitHub, and GitHub Pages
+   rebuilds the website automatically.
+
+News filenames use the `yyyymmdd-title.md` convention. Pages CMS supplies that
+format when a news entry is created. The filename can also be adjusted during
+creation when adding a backdated story.
+
+## Editable Content
+
+- `_news/`: news articles; the homepage automatically displays the newest three
+- `_people/`: directory records and individual profiles
+- `_data/site.yml`: lab identity, homepage, metrics, contact details, and links
+- `_data/research.yml`: research directions
+- `_data/opportunities.yml`: openings and application guidance
+- `_data/publications.yml`: selected publications
+- `_data/teaching.yml`: courses and mentoring activities
+- `assets/uploads/`: images uploaded through Pages CMS
+
+The `.pages.yml` file defines the editing forms. Layout and navigation are kept
+in `_layouts/` and `_includes/` so routine edits cannot alter the site structure.
 
 ## Local Preview
 
-Open `index.html` directly in a browser, or run a small local server:
+Build with the GitHub Pages-compatible Jekyll version:
 
 ```bash
-python3 -m http.server 8000
+jekyll _3.9.5_ serve
 ```
 
-Then visit `http://localhost:8000`.
+Then visit <http://localhost:4000/>.
 
-## GitHub Pages Hosting
+## Publishing
 
-This site is built as plain HTML, CSS, and JavaScript, so it can be published from the repository root with GitHub Pages.
-
-Recommended settings:
-
-- Source: deploy from a branch
-- Branch: `main`
-- Folder: `/ (root)`
-
-## Repository Visibility
-
-GitHub Pages can publish a public website from a private repository on GitHub Pro, Team, or Enterprise plans. On GitHub Free, Pages is available from public repositories. The published website should be treated as public even when the repository is private.
-
-Source for current lab content: https://search.asu.edu/profile/4845837
+GitHub Pages builds the `main` branch from the repository root. Do not restore a
+`.nojekyll` file; Jekyll processing is required for the generated pages.

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="page-hero section-pad" id="top">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">{{ page.date | date: "%B %Y" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+  </div>
+</section>
+<section class="section section-pad{% if page.tinted %} tinted{% endif %}">
+  <div class="detail-shell">
+    <article class="detail-card">
+      {% if page.image %}
+      <img class="detail-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}">
+      {% endif %}
+      {{ content }}
+      <div class="profile-links roomy-links">
+        <a href="{{ '/news.html' | relative_url }}">Back to news</a>
+        {% for link in page.links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </article>
+  </div>
+</section>

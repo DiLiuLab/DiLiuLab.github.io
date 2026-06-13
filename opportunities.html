@@ -1,91 +1,30 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Join | Di Liu Lab</title>
-    <meta name="description" content="Openings and research opportunities in the Di Liu Lab.">
-    <meta name="theme-color" content="#8c1d40">
-    <link rel="icon" href="assets/favicon-v5.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-header>
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Di Liu Lab home">
-          <span class="brand-mark" aria-hidden="true">DL</span>
-          <span><strong>Di Liu Lab</strong><small>ASU Molecular Sciences</small></span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
-        </button>
-        <div class="nav-links" id="site-nav">
-          <a href="index.html">Home</a>
-          <a href="research.html">Research</a>
-          <a href="people.html">People</a>
-          <a href="publications.html">Publications</a>
-          <a href="news.html">News</a>
-          <a href="opportunities.html">Join</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="page-hero section-pad" id="top">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">Join us</p>
-          <h1>We welcome motivated scientists interested in rigorous, creative research.</h1>
-          <p>
-            Interested candidates are encouraged to contact Di to discuss potential
-            research opportunities or collaborations.
-          </p>
-        </div>
-      </section>
-      <section class="section section-pad tinted">
-        <div class="join-grid">
-          <article>
-            <h3>Graduate students</h3>
-            <p>
-              Prospective students excited by nucleic acid engineering, structural
-              biology, chemical biology, and therapeutic design are encouraged to
-              reach out and apply through ASU graduate programs.
-            </p>
-          </article>
-          <article>
-            <h3>Postdoctoral researchers</h3>
-            <p>
-              The lab is seeking a postdoctoral researcher to lead RNA structure
-              projects using cryo-EM. Prior cryo-EM experience is helpful but not
-              required; scientific rigor and eagerness to learn are essential.
-            </p>
-          </article>
-          <article>
-            <h3>Undergraduate researchers</h3>
-            <p>
-              Undergraduate positions are limited because each student receives
-              close mentoring. Barrett Honors students interested in thesis work
-              are especially encouraged to plan ahead.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section class="section section-pad">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">How to reach out</p>
-          <h2>Send a concise note about your interests.</h2>
-          <p>
-            Please include your background, the research direction that interests
-            you, and relevant experience or goals. Attach a CV when appropriate.
-          </p>
-          <a class="button primary" href="mailto:Di.Liu@asu.edu">Email Di Liu</a>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <p>&copy; <span data-year></span> Di Liu Lab. Arizona State University.</p>
-      <a href="#top">Back to top</a>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+---
+layout: default
+title: Join
+description: Openings and research opportunities in the Di Liu Lab.
+---
+<section class="page-hero section-pad" id="top">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Join us</p>
+    <h1>{{ site.data.opportunities.title }}</h1>
+    <p>{{ site.data.opportunities.introduction }}</p>
+  </div>
+</section>
+<section class="section section-pad tinted">
+  <div class="join-grid">
+    {% for position in site.data.opportunities.positions %}
+    <article>
+      <h3>{{ position.title }}</h3>
+      <p>{{ position.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="section section-pad">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">How to reach out</p>
+    <h2>{{ site.data.opportunities.contact_title }}</h2>
+    <p>{{ site.data.opportunities.contact_text }}</p>
+    <a class="button primary" href="mailto:{{ site.data.site.email }}">Email Di Liu</a>
+  </div>
+</section>

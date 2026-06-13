@@ -1,0 +1,31 @@
+lab_name: Di Liu Lab
+brand_subtitle: ASU Molecular Sciences
+institution: Arizona State University
+tagline: Nucleic acid engineering for biology and medicine
+hero_title: Di Liu Lab
+hero_text: We program DNA and RNA architectures to study topology, solve RNA structures, and improve RNA therapeutics.
+hero_image: /assets/nucleic-acid-hero.png
+overview_title: Programmable nucleic acids as tools for discovery.
+overview_text: Our group uses the predictable geometry and base-pairing behavior of DNA and RNA to build nanoscale systems for structural biology, chemical biology, and therapeutic design.
+email: Di.Liu@asu.edu
+school: School of Molecular Sciences
+center: Biodesign Center for Molecular Design and Biomimetics
+office: 727 E. Tyler St. BDA 114A, BIODESIGN, Tempe, AZ 85281
+mail_code: "7301"
+campus: Tempe
+metrics:
+  - value: "2023"
+    label: Lab launched at ASU
+  - value: "3"
+    label: Research directions
+  - value: 60%+
+    label: Nature- and Science-family publications
+  - value: Tempe
+    label: Biodesign Institute
+external_links:
+  - label: ASU profile
+    url: https://search.asu.edu/profile/4845837
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?hl=en&user=jh1ypxQAAAAJ&view_op=list_works
+  - label: ORCID
+    url: https://orcid.org/0000-0002-0708-7466

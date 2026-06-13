@@ -1,176 +1,103 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Di Liu Lab | Nucleic Acid Engineering at ASU</title>
-    <meta
-      name="description"
-      content="The Di Liu Lab at Arizona State University engineers DNA and RNA nanoarchitectures to study topology, solve RNA structures, and improve RNA therapeutics."
-    >
-    <meta name="theme-color" content="#8c1d40">
-    <link rel="icon" href="assets/favicon-v5.svg" type="image/svg+xml">
-    <link rel="preload" href="assets/nucleic-acid-hero.png" as="image">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+---
+layout: default
+title: Nucleic Acid Engineering at ASU
+full_title: Di Liu Lab | Nucleic Acid Engineering at ASU
+description: The Di Liu Lab at Arizona State University engineers DNA and RNA nanoarchitectures to study topology, solve RNA structures, and improve RNA therapeutics.
+preload_hero: true
+---
+<section class="hero home-hero section-pad" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img src="{{ site.data.site.hero_image | relative_url }}" alt="">
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">{{ site.data.site.tagline }}</p>
+    <h1>{{ site.data.site.hero_title }}</h1>
+    <p class="hero-copy">{{ site.data.site.hero_text }}</p>
+    <div class="hero-actions" aria-label="Primary actions">
+      <a class="button primary" href="{{ '/research.html' | relative_url }}">Research</a>
+      <a class="button secondary" href="{{ '/opportunities.html' | relative_url }}">Join us</a>
+    </div>
+  </div>
+</section>
 
-    <header class="site-header" data-header>
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Di Liu Lab home">
-          <span class="brand-mark" aria-hidden="true">DL</span>
-          <span>
-            <strong>Di Liu Lab</strong>
-            <small>ASU Molecular Sciences</small>
-          </span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="nav-links" id="site-nav">
-          <a href="index.html">Home</a>
-          <a href="research.html">Research</a>
-          <a href="people.html">People</a>
-          <a href="publications.html">Publications</a>
-          <a href="news.html">News</a>
-          <a href="opportunities.html">Join</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
+<section class="intro-band" aria-label="Lab snapshot">
+  <div class="intro-grid">
+    {% for metric in site.data.site.metrics %}
+    <div>
+      <span class="metric">{{ metric.value }}</span>
+      <p>{{ metric.label }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
-    <main id="main">
-      <section class="hero home-hero section-pad" id="top">
-        <div class="hero-media" aria-hidden="true">
-          <img src="assets/nucleic-acid-hero.png" alt="">
-        </div>
-        <div class="hero-content">
-          <p class="eyebrow">Nucleic acid engineering for biology and medicine</p>
-          <h1>Di Liu Lab</h1>
-          <p class="hero-copy">
-            We program DNA and RNA architectures to study topology, solve RNA
-            structures, and improve RNA therapeutics.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="research.html">Research</a>
-            <a class="button secondary" href="opportunities.html">Join us</a>
-          </div>
-        </div>
-      </section>
+<section class="section section-pad">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Overview</p>
+    <h2>{{ site.data.site.overview_title }}</h2>
+    <p>{{ site.data.site.overview_text }}</p>
+  </div>
+  <div class="link-grid">
+    <a class="summary-card" href="{{ '/research.html' | relative_url }}">
+      <span class="card-index">01</span>
+      <h3>Research</h3>
+      <p>DNA topology, RNA cryo-EM, and programmable mRNA therapeutics.</p>
+    </a>
+    <a class="summary-card" href="{{ '/people.html' | relative_url }}">
+      <span class="card-index">02</span>
+      <h3>People</h3>
+      <p>Current lab members and principal investigator profile links.</p>
+    </a>
+    <a class="summary-card" href="{{ '/publications.html' | relative_url }}">
+      <span class="card-index">03</span>
+      <h3>Publications</h3>
+      <p>Selected papers in RNA structure and nucleic acid nanotechnology.</p>
+    </a>
+    <a class="summary-card" href="{{ '/news.html' | relative_url }}">
+      <span class="card-index">04</span>
+      <h3>News</h3>
+      <p>Recent lab updates, people news, publications, and announcements.</p>
+    </a>
+    <a class="summary-card" href="{{ '/opportunities.html' | relative_url }}">
+      <span class="card-index">05</span>
+      <h3>Join</h3>
+      <p>Openings and guidance for postdocs, graduate students, and undergraduates.</p>
+    </a>
+  </div>
+</section>
 
-      <section class="intro-band" aria-label="Lab snapshot">
-        <div class="intro-grid">
-          <div>
-            <span class="metric">2023</span>
-            <p>Lab launched at ASU</p>
-          </div>
-          <div>
-            <span class="metric">3</span>
-            <p>Research directions</p>
-          </div>
-          <div>
-            <span class="metric">60%+</span>
-            <p>Nature- and Science-family publications</p>
-          </div>
-          <div>
-            <span class="metric">Tempe</span>
-            <p>Biodesign Institute</p>
-          </div>
-        </div>
-      </section>
+<section class="section section-pad tinted">
+  <div class="section-heading">
+    <p class="eyebrow">Recent updates</p>
+    <h2>Latest news</h2>
+  </div>
+  <div class="news-grid">
+    {% assign latest_news = site.news | sort: "date" | reverse %}
+    {% for item in latest_news limit: 3 %}
+    <article>
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%B %Y" }}</time>
+      <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+      <p>{{ item.card_summary | default: item.summary }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <a class="text-link section-link" href="{{ '/news.html' | relative_url }}">View all news</a>
+</section>
 
-      <section class="section section-pad">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">Overview</p>
-          <h2>Programmable nucleic acids as tools for discovery.</h2>
-          <p>
-            Our group uses the predictable geometry and base-pairing behavior of
-            DNA and RNA to build nanoscale systems for structural biology,
-            chemical biology, and therapeutic design.
-          </p>
-        </div>
-        <div class="link-grid">
-          <a class="summary-card" href="research.html">
-            <span class="card-index">01</span>
-            <h3>Research</h3>
-            <p>DNA topology, RNA cryo-EM, and programmable mRNA therapeutics.</p>
-          </a>
-          <a class="summary-card" href="people.html">
-            <span class="card-index">02</span>
-            <h3>People</h3>
-            <p>Current lab members and principal investigator profile links.</p>
-          </a>
-          <a class="summary-card" href="publications.html">
-            <span class="card-index">03</span>
-            <h3>Publications</h3>
-            <p>Selected papers in RNA structure and nucleic acid nanotechnology.</p>
-          </a>
-          <a class="summary-card" href="news.html">
-            <span class="card-index">04</span>
-            <h3>News</h3>
-            <p>Recent lab updates, people news, publications, and placeholders for future announcements.</p>
-          </a>
-          <a class="summary-card" href="opportunities.html">
-            <span class="card-index">05</span>
-            <h3>Join</h3>
-            <p>Openings and guidance for postdocs, graduate students, and undergraduates.</p>
-          </a>
-        </div>
-      </section>
-
-      <section class="section section-pad tinted">
-        <div class="section-heading">
-          <p class="eyebrow">Recent updates</p>
-          <h2>Latest news</h2>
-        </div>
-        <div class="news-grid">
-          <article>
-            <time datetime="2026-06">June 2026</time>
-            <h3><a href="news/20260601-placeholder-milestone.html">Placeholder: lab milestone or award</a></h3>
-            <p>Add a short update about publications, funding, student awards, or conference presentations.</p>
-          </article>
-          <article>
-            <time datetime="2025-08">August 2025</time>
-            <h3><a href="news/20250801-new-students.html">New students join the lab</a></h3>
-            <p>The group continues to grow with new graduate and undergraduate researchers.</p>
-          </article>
-          <article>
-            <time datetime="2024-08">August 2024</time>
-            <h3><a href="news/20240801-postdocs-join.html">Postdoctoral researchers join the team</a></h3>
-            <p>Cong Li and Zhishang Li join the Liu Lab as postdoctoral researchers.</p>
-          </article>
-        </div>
-        <a class="text-link section-link" href="news.html">View all news</a>
-      </section>
-
-      <section class="contact-band section-pad">
-        <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h2>Di Liu Lab</h2>
-          <p>
-            School of Molecular Sciences<br>
-            Biodesign Center for Molecular Design and Biomimetics<br>
-            Arizona State University
-          </p>
-        </div>
-        <div class="contact-card">
-          <p><strong>Email</strong><a href="mailto:Di.Liu@asu.edu">Di.Liu@asu.edu</a></p>
-          <p><strong>Office</strong>727 E. Tyler St. BDA 114A, BIODESIGN, Tempe, AZ 85281</p>
-          <p><strong>Campus</strong>Tempe</p>
-          <p><strong>More</strong><a href="contact.html">Contact and teaching</a></p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>&copy; <span data-year></span> Di Liu Lab. Arizona State University.</p>
-      <a href="#top">Back to top</a>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
-</html>
+<section class="contact-band section-pad">
+  <div class="contact-copy">
+    <p class="eyebrow">Contact</p>
+    <h2>{{ site.data.site.lab_name }}</h2>
+    <p>
+      {{ site.data.site.school }}<br>
+      {{ site.data.site.center }}<br>
+      {{ site.data.site.institution }}
+    </p>
+  </div>
+  <div class="contact-card">
+    <p><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
+    <p><strong>Office</strong>{{ site.data.site.office }}</p>
+    <p><strong>Campus</strong>{{ site.data.site.campus }}</p>
+    <p><strong>More</strong><a href="{{ '/contact.html' | relative_url }}">Contact and teaching</a></p>
+  </div>
+</section>

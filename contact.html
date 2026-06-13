@@ -1,84 +1,44 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact | Di Liu Lab</title>
-    <meta name="description" content="Contact information and teaching for the Di Liu Lab at Arizona State University.">
-    <meta name="theme-color" content="#8c1d40">
-    <link rel="icon" href="assets/favicon-v5.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-header>
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Di Liu Lab home">
-          <span class="brand-mark" aria-hidden="true">DL</span>
-          <span><strong>Di Liu Lab</strong><small>ASU Molecular Sciences</small></span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
-        </button>
-        <div class="nav-links" id="site-nav">
-          <a href="index.html">Home</a>
-          <a href="research.html">Research</a>
-          <a href="people.html">People</a>
-          <a href="publications.html">Publications</a>
-          <a href="news.html">News</a>
-          <a href="opportunities.html">Join</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="contact-band section-pad" id="top">
-        <div class="contact-copy">
-          <p class="eyebrow">Contact</p>
-          <h1>Di Liu Lab</h1>
-          <p>
-            School of Molecular Sciences<br>
-            Biodesign Center for Molecular Design and Biomimetics<br>
-            Arizona State University
-          </p>
-        </div>
-        <div class="contact-card">
-          <p><strong>Email</strong><a href="mailto:Di.Liu@asu.edu">Di.Liu@asu.edu</a></p>
-          <p><strong>Office</strong>727 E. Tyler St. BDA 114A, BIODESIGN, Tempe, AZ 85281</p>
-          <p><strong>Mail code</strong>7301</p>
-          <p><strong>Campus</strong>Tempe</p>
-        </div>
-      </section>
-      <section class="section section-pad">
-        <div class="section-heading">
-          <p class="eyebrow">Teaching</p>
-          <h2>Courses and mentoring</h2>
-        </div>
-        <div class="course-list">
-          <span>Bionanotechnology</span>
-          <span>Elementary Biochemistry Lab</span>
-          <span>Intro to Research Techniques</span>
-          <span>Honors Directed Study</span>
-          <span>Honors Thesis</span>
-          <span>Undergraduate Research</span>
-        </div>
-      </section>
-      <section class="section section-pad tinted">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">Links</p>
-          <h2>External profiles</h2>
-          <div class="profile-links roomy-links">
-            <a href="https://search.asu.edu/profile/4845837">ASU profile</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=jh1ypxQAAAAJ&view_op=list_works">Google Scholar</a>
-            <a href="https://orcid.org/0000-0002-0708-7466">ORCID</a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <p>&copy; <span data-year></span> Di Liu Lab. Arizona State University.</p>
-      <a href="#top">Back to top</a>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+---
+layout: default
+title: Contact
+description: Contact information and teaching for the Di Liu Lab at Arizona State University.
+---
+<section class="contact-band section-pad" id="top">
+  <div class="contact-copy">
+    <p class="eyebrow">Contact</p>
+    <h1>{{ site.data.site.lab_name }}</h1>
+    <p>
+      {{ site.data.site.school }}<br>
+      {{ site.data.site.center }}<br>
+      {{ site.data.site.institution }}
+    </p>
+  </div>
+  <div class="contact-card">
+    <p><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
+    <p><strong>Office</strong>{{ site.data.site.office }}</p>
+    <p><strong>Mail code</strong>{{ site.data.site.mail_code }}</p>
+    <p><strong>Campus</strong>{{ site.data.site.campus }}</p>
+  </div>
+</section>
+<section class="section section-pad">
+  <div class="section-heading">
+    <p class="eyebrow">Teaching</p>
+    <h2>Courses and mentoring</h2>
+  </div>
+  <div class="course-list">
+    {% for course in site.data.teaching %}
+    <span>{{ course.name }}</span>
+    {% endfor %}
+  </div>
+</section>
+<section class="section section-pad tinted">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Links</p>
+    <h2>External profiles</h2>
+    <div class="profile-links roomy-links">
+      {% for link in site.data.site.external_links %}
+      <a href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

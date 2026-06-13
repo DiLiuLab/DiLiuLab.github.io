@@ -1,0 +1,395 @@
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+  categories: [image]
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "Content: add {name}"
+      update: "Content: update {name}"
+      delete: "Content: remove {name}"
+      rename: "Content: rename {oldFilename} to {newFilename}"
+
+content:
+  - name: updates
+    label: News & People
+    type: group
+    items:
+      - name: news
+        label: News
+        type: collection
+        path: _news
+        format: yaml-frontmatter
+        filename:
+          template: "{year}{month}{day}-{title}.md"
+          field: create
+        view:
+          primary: title
+          fields: [date, card_summary]
+          sort: date
+          order: desc
+        fields:
+          - name: title
+            label: Headline
+            type: string
+            required: true
+          - name: date
+            label: Publication date
+            type: date
+            required: true
+            options:
+              time: false
+              format: yyyy-MM-dd
+          - name: summary
+            label: Article introduction
+            type: text
+            required: true
+          - name: card_summary
+            label: Short listing summary
+            type: text
+            required: true
+          - name: description
+            label: Search description
+            type: text
+          - name: image
+            label: Article image
+            type: image
+          - name: image_alt
+            label: Image description
+            type: string
+          - name: tinted
+            label: Use tinted article background
+            type: boolean
+            default: false
+          - name: links
+            label: Related links
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: Link label
+                type: string
+                required: true
+              - name: url
+                label: URL
+                type: string
+                required: true
+          - name: body
+            label: Article
+            type: rich-text
+            required: true
+
+      - name: people
+        label: People
+        type: collection
+        path: _people
+        format: yaml-frontmatter
+        filename:
+          template: "{name}.md"
+          field: create
+        view:
+          primary: name
+          fields: [group, role, directory_detail]
+          sort: order
+          order: asc
+        fields:
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: initials
+            label: Initials
+            type: string
+            required: true
+          - name: group
+            label: Directory group
+            type: select
+            required: true
+            options:
+              values:
+                - name: principal-investigator
+                  label: Principal investigator
+                - name: postdoctoral
+                  label: Postdoctoral researchers
+                - name: graduate
+                  label: Graduate students
+                - name: undergraduate
+                  label: Undergraduate and high-school researchers
+          - name: role_label
+            label: Profile eyebrow
+            type: string
+            required: true
+          - name: role
+            label: Role or title
+            type: string
+            required: true
+          - name: years
+            label: Years
+            type: string
+          - name: directory_detail
+            label: Directory detail
+            type: string
+          - name: directory_summary
+            label: Directory biography
+            type: text
+          - name: order
+            label: Display order
+            type: number
+            required: true
+          - name: profile_enabled
+            label: Link to individual profile
+            type: boolean
+            default: false
+          - name: image
+            label: Portrait
+            type: image
+          - name: interests
+            label: Research interests
+            type: string
+            list: true
+          - name: links
+            label: Profile links
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: Link label
+                type: string
+                required: true
+              - name: url
+                label: URL
+                type: string
+                required: true
+          - name: tinted
+            label: Use tinted profile background
+            type: boolean
+            default: false
+          - name: description
+            label: Search description
+            type: text
+          - name: body
+            label: Biography
+            type: rich-text
+            required: true
+
+  - name: site-content
+    label: Site Content
+    type: group
+    items:
+      - name: site-settings
+        label: Lab & Homepage
+        type: file
+        path: _data/site.yml
+        format: yaml
+        fields:
+          - name: lab_name
+            label: Lab name
+            type: string
+            required: true
+          - name: brand_subtitle
+            label: Header subtitle
+            type: string
+            required: true
+          - name: institution
+            label: Institution
+            type: string
+            required: true
+          - name: tagline
+            label: Homepage tagline
+            type: string
+            required: true
+          - name: hero_title
+            label: Homepage title
+            type: string
+            required: true
+          - name: hero_text
+            label: Homepage introduction
+            type: text
+            required: true
+          - name: hero_image
+            label: Homepage image
+            type: image
+            required: true
+          - name: overview_title
+            label: Overview title
+            type: string
+            required: true
+          - name: overview_text
+            label: Overview text
+            type: text
+            required: true
+          - name: email
+            label: Email
+            type: string
+            required: true
+          - name: school
+            label: School
+            type: string
+            required: true
+          - name: center
+            label: Center
+            type: string
+            required: true
+          - name: office
+            label: Office address
+            type: text
+            required: true
+          - name: mail_code
+            label: Mail code
+            type: string
+          - name: campus
+            label: Campus
+            type: string
+            required: true
+          - name: metrics
+            label: Homepage metrics
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{value}: {label}"
+            fields:
+              - name: value
+                label: Value
+                type: string
+                required: true
+              - name: label
+                label: Label
+                type: string
+                required: true
+          - name: external_links
+            label: External profiles
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: Link label
+                type: string
+                required: true
+              - name: url
+                label: URL
+                type: string
+                required: true
+
+      - name: research
+        label: Research
+        type: file
+        path: _data/research.yml
+        format: yaml
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            required: true
+          - name: introduction
+            label: Introduction
+            type: text
+            required: true
+          - name: areas
+            label: Research areas
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: topics
+                label: Topics
+                type: string
+                list: true
+
+      - name: opportunities
+        label: Opportunities
+        type: file
+        path: _data/opportunities.yml
+        format: yaml
+        fields:
+          - name: title
+            label: Page title
+            type: string
+            required: true
+          - name: introduction
+            label: Introduction
+            type: text
+            required: true
+          - name: positions
+            label: Position types
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+          - name: contact_title
+            label: Contact heading
+            type: string
+            required: true
+          - name: contact_text
+            label: Contact guidance
+            type: text
+            required: true
+
+      - name: publications
+        label: Publications
+        type: file
+        path: _data/publications.yml
+        format: yaml
+        list: true
+        fields:
+          - name: year
+            label: Year
+            type: number
+            required: true
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: citation
+            label: Citation
+            type: string
+            required: true
+          - name: url
+            label: DOI or article URL
+            type: string
+
+      - name: teaching
+        label: Teaching
+        type: file
+        path: _data/teaching.yml
+        format: yaml
+        list: true
+        fields:
+          - name: name
+            label: Course or activity
+            type: string
+            required: true

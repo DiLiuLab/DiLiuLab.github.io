@@ -1,99 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Research | Di Liu Lab</title>
-    <meta name="description" content="Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, and programmable mRNA therapeutics.">
-    <meta name="theme-color" content="#8c1d40">
-    <link rel="icon" href="assets/favicon-v5.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" data-header>
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Di Liu Lab home">
-          <span class="brand-mark" aria-hidden="true">DL</span>
-          <span><strong>Di Liu Lab</strong><small>ASU Molecular Sciences</small></span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
-        </button>
-        <div class="nav-links" id="site-nav">
-          <a href="index.html">Home</a>
-          <a href="research.html">Research</a>
-          <a href="people.html">People</a>
-          <a href="publications.html">Publications</a>
-          <a href="news.html">News</a>
-          <a href="opportunities.html">Join</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="page-hero section-pad" id="top">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">Research</p>
-          <h1>Engineering DNA and RNA architectures for biological discovery.</h1>
-          <p>
-            Nucleic acids are programmable molecules with predictable base pairing
-            and well-defined helical geometry. We use those properties to design
-            nanoscale systems that address fundamental and translational questions.
-          </p>
-        </div>
-      </section>
-      <section class="section section-pad tinted">
-        <div class="research-grid">
-          <article class="research-card">
-            <span class="card-index">01</span>
-            <h3>Synthetic DNA topology</h3>
-            <p>
-              We design DNA constructs with naturally inaccessible topologies to
-              reveal how cells resolve topological challenges and to identify
-              inhibitors of bacterial type IA topoisomerases.
-            </p>
-            <ul>
-              <li>DNA knots, links, and supercoiling-inspired systems</li>
-              <li>Topoisomerase mechanism and inhibition</li>
-              <li>Broad-spectrum antibiotic discovery concepts</li>
-            </ul>
-          </article>
-          <article class="research-card">
-            <span class="card-index">02</span>
-            <h3>RNA architectures for cryo-EM</h3>
-            <p>
-              We build nanoarchitectural strategies that overcome small size and
-              flexibility in RNA cryo-EM, extending methods such as ROCK for
-              high-resolution RNA structural determination.
-            </p>
-            <ul>
-              <li>RNA oligomerization-enabled cryo-EM</li>
-              <li>Functional and viral RNA structure</li>
-              <li>RNA-targeting therapeutic discovery</li>
-            </ul>
-          </article>
-          <article class="research-card">
-            <span class="card-index">03</span>
-            <h3>Programmable mRNA therapeutics</h3>
-            <p>
-              We explore how mRNA structure can improve intracellular stability,
-              expression durability, and cell- or tissue-selective translation for
-              vaccines and RNA medicines.
-            </p>
-            <ul>
-              <li>Structure-guided mRNA stability</li>
-              <li>Selective expression programs</li>
-              <li>RNA medicine design principles</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <p>&copy; <span data-year></span> Di Liu Lab. Arizona State University.</p>
-      <a href="#top">Back to top</a>
-    </footer>
-    <script src="script.js"></script>
-  </body>
-</html>
+---
+layout: default
+title: Research
+description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, and programmable mRNA therapeutics."
+---
+<section class="page-hero section-pad" id="top">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Research</p>
+    <h1>{{ site.data.research.title }}</h1>
+    <p>{{ site.data.research.introduction }}</p>
+  </div>
+</section>
+<section class="section section-pad tinted">
+  <div class="research-grid">
+    {% for area in site.data.research.areas %}
+    <article class="research-card">
+      <span class="card-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+      <h3>{{ area.title }}</h3>
+      <p>{{ area.description }}</p>
+      <ul>
+        {% for topic in area.topics %}
+        <li>{{ topic }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>

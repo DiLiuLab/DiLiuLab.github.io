@@ -1,0 +1,21 @@
+title: Engineering DNA and RNA architectures for biological discovery.
+introduction: Nucleic acids are programmable molecules with predictable base pairing and well-defined helical geometry. We use those properties to design nanoscale systems that address fundamental and translational questions.
+areas:
+  - title: Synthetic DNA topology
+    description: We design DNA constructs with naturally inaccessible topologies to reveal how cells resolve topological challenges and to identify inhibitors of bacterial type IA topoisomerases.
+    topics:
+      - DNA knots, links, and supercoiling-inspired systems
+      - Topoisomerase mechanism and inhibition
+      - Broad-spectrum antibiotic discovery concepts
+  - title: RNA architectures for cryo-EM
+    description: We build nanoarchitectural strategies that overcome small size and flexibility in RNA cryo-EM, extending methods such as ROCK for high-resolution RNA structural determination.
+    topics:
+      - RNA oligomerization-enabled cryo-EM
+      - Functional and viral RNA structure
+      - RNA-targeting therapeutic discovery
+  - title: Programmable mRNA therapeutics
+    description: We explore how mRNA structure can improve intracellular stability, expression durability, and cell- or tissue-selective translation for vaccines and RNA medicines.
+    topics:
+      - Structure-guided mRNA stability
+      - Selective expression programs
+      - RNA medicine design principles

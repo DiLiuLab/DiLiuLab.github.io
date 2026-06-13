@@ -1,0 +1,29 @@
+title: Di Liu Lab
+description: Nucleic acid engineering at Arizona State University
+url: https://diliulab.github.io
+baseurl: ""
+
+collections:
+  news:
+    output: true
+    permalink: /news/:name.html
+  people:
+    output: true
+    permalink: /people/:name.html
+
+defaults:
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: news-detail
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: person-detail
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
