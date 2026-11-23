@@ -7,7 +7,9 @@
       <h{{ include.heading_level }} class="publication-title">{% if publication.url and publication.url != empty %}<a href="{{ publication.url }}">{{ publication.title | escape }}</a>{% else %}{{ publication.title | escape }}{% endif %}</h{{ include.heading_level }}>
       <p class="publication-authors">{{ publication.authors }}</p>
       <p class="publication-citation">{{ publication.citation }}</p>
-      {% if publication.note != '' %}<p class="publication-note">{{ publication.note }}</p>{% endif %}
+      {% if publication.note != '' or publication.cover_url %}
+      <p class="publication-note">{{ publication.note }}{% if publication.cover_url %} <a href="{{ publication.cover_url }}">Cover Story</a>{% endif %}</p>
+      {% endif %}
     </div>
   </article>
   {% endfor %}

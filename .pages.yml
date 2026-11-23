@@ -411,6 +411,9 @@ content:
     - name: note
       label: Authorship and highlights
       type: text
+    - name: cover_url
+      label: Cover Story URL
+      type: string
   - name: teaching
     label: Teaching
     type: file
