@@ -19,20 +19,20 @@ description: Publications and submitted preprints by Di Liu and collaborators in
 {% for section in sections %}
 <section class="section section-pad{% if section == 'preprint' %} tinted{% endif %}" id="{% if section == 'preprint' %}preprints{% else %}published{% endif %}">
   <div class="section-heading"><h2>{% if section == 'preprint' %}Preprints &amp; submitted work{% else %}Peer-reviewed publications{% endif %}</h2></div>
-  <div class="publication-list">
-    {% assign publications = site.data.publications | where: 'status', section %}
-    {% for publication in publications %}
-    <article>
-      <div class="publication-year">{{ publication.year }}</div>
-      <div>
-        <p class="publication-meta">{{ publication.era }}{% if section == 'preprint' %} · Preprint · Not peer reviewed{% endif %}</p>
-        <h3>{% if publication.url and publication.url != empty %}<a href="{{ publication.url }}">{{ publication.title | escape }}</a>{% else %}{{ publication.title | escape }}{% endif %}</h3>
-        <p class="publication-authors">{{ publication.authors }}</p>
-        <p class="publication-citation">{{ publication.citation }}</p>
-        {% if publication.note != '' %}<p class="publication-note">{{ publication.note }}</p>{% endif %}
+  {% assign publications = site.data.publications | where: 'status', section %}
+  {% if section == 'preprint' %}
+    {% include publication-list.html publications=publications heading_level=3 %}
+  {% else %}
+    {% assign eras = 'ASU,Before ASU' | split: ',' %}
+    {% for era in eras %}
+      {% assign era_publications = publications | where: 'era', era %}
+      {% if era_publications.size > 0 %}
+      <div class="publication-group">
+        <h3 class="publication-group-title">{{ era }}</h3>
+        {% include publication-list.html publications=era_publications heading_level=4 %}
       </div>
-    </article>
+      {% endif %}
     {% endfor %}
-  </div>
+  {% endif %}
 </section>
 {% endfor %}

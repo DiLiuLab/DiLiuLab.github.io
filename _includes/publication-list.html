@@ -1,0 +1,14 @@
+<div class="publication-list">
+  {% for publication in include.publications %}
+  <article>
+    <div class="publication-year">{{ publication.year }}</div>
+    <div>
+      {% if publication.status == 'preprint' %}<p class="publication-meta">Preprint · Not peer reviewed</p>{% endif %}
+      <h{{ include.heading_level }} class="publication-title">{% if publication.url and publication.url != empty %}<a href="{{ publication.url }}">{{ publication.title | escape }}</a>{% else %}{{ publication.title | escape }}{% endif %}</h{{ include.heading_level }}>
+      <p class="publication-authors">{{ publication.authors }}</p>
+      <p class="publication-citation">{{ publication.citation }}</p>
+      {% if publication.note != '' %}<p class="publication-note">{{ publication.note }}</p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

@@ -893,3 +893,8 @@ html { scroll-padding-top: 6rem; }
 @media (max-width: 920px) { .link-grid, .course-grid, .patent-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .intro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .link-grid, .course-grid, .patent-grid, .people-list li { grid-template-columns: 1fr; } .hero-content { width: 100%; } .publication-list article { gap: 0.5rem; } .section-heading { width: 100%; } .intro-grid div { padding: 1.1rem; } .metric { font-size: 1.5rem; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+
+.publication-group + .publication-group { margin-top: 3rem; }
+.publication-group-title { width: min(var(--max), calc(100% - 2rem)); margin: 0 auto 1rem; font-size: 1.5rem; color: var(--asu-maroon); }
+.publication-list .publication-title { margin: 0 0 0.25rem; font-size: 1.15rem; line-height: 1.3; }
+.publication-title a { text-decoration-color: var(--asu-gold); text-underline-offset: 4px; }
