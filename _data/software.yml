@@ -1,0 +1,16 @@
+title: Software for molecular design.
+introduction: Explore tools for designing, manipulating, and analyzing molecular structures. Visit our GitHub organization
+  for lab code and the AZBMOST project for a coordinated set of structural design tools.
+github_url: https://github.com/DiLiuLab
+project_name: AZBMOST
+project_expansion: A- to Z-form Biomolecular Orchestration of Structures and Topologies
+project_url: https://github.com/azbmost/azbmost
+project_description: AZBMOST brings together three independent structural-biology tools through a shared graphical
+  launcher, supporting the design and manipulation of nucleic acid architectures.
+tools:
+- name: BNP-NA
+  description: Build and place nucleic acid helices.
+- name: Re-Helix
+  description: Align helices and perform reciprocal exchange.
+- name: Curve It
+  description: Shape PDB structures along three-dimensional curves.

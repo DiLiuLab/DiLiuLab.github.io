@@ -29,6 +29,7 @@ creation when adding a backdated story.
 - `_data/publications.yml`: selected publications
 - `_data/teaching.yml`: course codes, descriptions, and teaching terms
 - `_data/innovation.yml`: public patent applications and technology translation
+- `_data/software.yml`: lab GitHub, AZBMOST, and software descriptions
 - `teaching.html`: teaching philosophy, mentoring, and outreach
 - `assets/uploads/`: images uploaded through Pages CMS
 

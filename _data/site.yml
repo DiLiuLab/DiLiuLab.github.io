@@ -32,3 +32,7 @@ external_links:
   url: https://scholar.google.com/citations?hl=en&user=jh1ypxQAAAAJ&view_op=list_works
 - label: ORCID
   url: https://orcid.org/0000-0002-0708-7466
+- label: Lab GitHub
+  url: https://github.com/DiLiuLab
+- label: AZBMOST
+  url: https://github.com/azbmost/azbmost

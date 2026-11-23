@@ -463,3 +463,41 @@ content:
       - name: note
         label: Note
         type: text
+  - name: software
+    label: Software & Resources
+    type: file
+    path: _data/software.yml
+    format: yaml
+    fields:
+    - name: title
+      label: Section title
+      type: string
+    - name: introduction
+      label: Introduction
+      type: text
+    - name: github_url
+      label: Lab GitHub URL
+      type: string
+    - name: project_name
+      label: Project name
+      type: string
+    - name: project_expansion
+      label: Full project name
+      type: string
+    - name: project_url
+      label: Project URL
+      type: string
+    - name: project_description
+      label: Project description
+      type: text
+    - name: tools
+      label: Project tools
+      type: object
+      list: true
+      fields:
+      - name: name
+        label: Name
+        type: string
+      - name: description
+        label: Description
+        type: text

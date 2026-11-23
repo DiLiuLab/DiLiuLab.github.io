@@ -40,6 +40,33 @@ description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, 
     <p>Supported by the Stand Up To Cancer–Nina Nicolai Pancreatic Cancer Innovation in Collaboration Award, our collaboration with Dr. Eric Tran at Providence Cancer Institute investigates Cap2 mRNA strategies to strengthen TCR-engineered T-cell therapy. Di Liu serves as the ASU principal investigator.</p>
   </div>
 </section>
+<section class="section section-pad tinted" id="software">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Software &amp; resources</p>
+    <h2>{{ site.data.software.title }}</h2>
+    <p>{{ site.data.software.introduction }}</p>
+  </div>
+  <div class="split">
+    <article class="research-card">
+      <h3>{{ site.data.software.project_name }}</h3>
+      <p><strong>{{ site.data.software.project_expansion }}</strong></p>
+      <p>{{ site.data.software.project_description }}</p>
+      <ul>
+        {% for tool in site.data.software.tools %}
+        <li><strong>{{ tool.name }}</strong>: {{ tool.description }}</li>
+        {% endfor %}
+      </ul>
+      <div class="profile-links roomy-links"><a href="{{ site.data.software.project_url }}">Explore AZBMOST on GitHub</a></div>
+    </article>
+    <article class="research-card">
+      <h3>Di Liu Lab on GitHub</h3>
+      <p>Find our public repositories for nucleic acid design, molecular topology, structural analysis, and scientific visualization.</p>
+      <p>Browse the code and project documentation to learn how to use the tools and follow their development.</p>
+      <div class="profile-links roomy-links"><a href="{{ site.data.software.github_url }}">Browse lab repositories</a></div>
+    </article>
+  </div>
+</section>
+
 <section class="section section-pad tinted">
   <div class="section-heading compact-heading">
     <p class="eyebrow">Innovation</p>
