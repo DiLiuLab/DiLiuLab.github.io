@@ -6,13 +6,15 @@ role_label: Undergraduate researcher
 role: Undergraduate researcher
 years: 2025-present
 directory_detail: 2025-present
-directory_summary: Add a concise profile summary.
+directory_summary: Rohan Shrestha is a undergraduate researcher in the Di Liu Lab.
 order: 4
 profile_enabled: false
 tinted: false
-image:
+image: null
 interests: []
 links: []
-description: Profile placeholder for Rohan Shrestha.
+description: Rohan Shrestha, undergraduate researcher in the Di Liu Lab at Arizona State University.
 ---
-Add a brief biography, research project, methods, education, presentations, or professional links when ready.
+Rohan Shrestha is a undergraduate researcher in the Di Liu Lab at Arizona State University.
+
+2025-present.

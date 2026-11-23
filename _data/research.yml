@@ -1,21 +1,29 @@
-title: Engineering DNA and RNA architectures for biological discovery.
-introduction: Nucleic acids are programmable molecules with predictable base pairing and well-defined helical geometry. We use those properties to design nanoscale systems that address fundamental and translational questions.
+title: Engineering nucleic acids across scales and functions.
+introduction: DNA and RNA are both biological molecules and programmable building materials. We design their structures,
+  control their topology, and explore how these properties can advance structural biology, biotechnology, and medicine.
 areas:
-  - title: Synthetic DNA topology
-    description: We design DNA constructs with naturally inaccessible topologies to reveal how cells resolve topological challenges and to identify inhibitors of bacterial type IA topoisomerases.
-    topics:
-      - DNA knots, links, and supercoiling-inspired systems
-      - Topoisomerase mechanism and inhibition
-      - Broad-spectrum antibiotic discovery concepts
-  - title: RNA architectures for cryo-EM
-    description: We build nanoarchitectural strategies that overcome small size and flexibility in RNA cryo-EM, extending methods such as ROCK for high-resolution RNA structural determination.
-    topics:
-      - RNA oligomerization-enabled cryo-EM
-      - Functional and viral RNA structure
-      - RNA-targeting therapeutic discovery
-  - title: Programmable mRNA therapeutics
-    description: We explore how mRNA structure can improve intracellular stability, expression durability, and cell- or tissue-selective translation for vaccines and RNA medicines.
-    topics:
-      - Structure-guided mRNA stability
-      - Selective expression programs
-      - RNA medicine design principles
+- title: Synthetic nucleic acid topology
+  description: We construct DNA and RNA knots, links, and supercoiled molecules with defined topologies. These structures
+    let us investigate how topoisomerases resolve molecular tangles and develop substrates for enzyme assays and
+    inhibitor screening.
+  topics:
+  - 'Four-ring Brunnian links: collectively linked rings that separate when any one ring is cut'
+  - Topological constraints that stabilize left-handed Z-DNA
+  - Defined DNA substrates for topoisomerase activity and drug-discovery studies
+- title: RNA nanostructures and structural biology
+  description: We combine programmable RNA self-assembly, cryo-electron microscopy, and computational prediction
+    to understand RNA structure. Our work spans engineered assemblies for high-resolution cryo-EM, the RhoFold+
+    prediction platform, and increasingly complex RNA architectures.
+  topics:
+  - RNA oligomerization-enabled cryo-EM (ROCK)
+  - 'RhoFold+: language model-based RNA 3D structure prediction'
+  - Programmable RNA assemblies with more than 100 unique components
+  - Long-term development of intracellular RNA computing systems
+- title: RNA-based therapeutics
+  description: We develop chemical approaches to control when, where, and how efficiently mRNA produces proteins.
+    Our goals are to improve mRNA stability, duration of activity, and cell-type specificity, and to enhance immune
+    responses against difficult-to-treat cancers.
+  topics:
+  - Chemical control of mRNA translation and stability
+  - Cap engineering and targeted cellular translation
+  - RNA strategies to strengthen TCR-engineered T-cell therapy for pancreatic cancer

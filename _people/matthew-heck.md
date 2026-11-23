@@ -6,13 +6,16 @@ role_label: Graduate student
 role: Graduate student
 years: 2025-present
 directory_detail: Co-advised with Prof. Jia Guo, 2025-present
-directory_summary: Add a concise profile summary.
+directory_summary: Matthew Heck is a graduate student in the Di Liu Lab.
 order: 1
 profile_enabled: false
 tinted: false
-image:
+image: null
 interests: []
 links: []
-description: Profile placeholder for Matthew Heck.
+description: Matthew Heck, graduate student in the Di Liu Lab at Arizona State University.
+published: false
 ---
-Add a brief biography, research project, methods, education, publications, presentations, or professional links when ready.
+Matthew Heck is a graduate student in the Di Liu Lab at Arizona State University.
+
+Co-advised with Prof. Jia Guo, 2025-present.

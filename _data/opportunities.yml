@@ -1,11 +1,22 @@
-title: We welcome motivated scientists interested in rigorous, creative research.
-introduction: Interested candidates are encouraged to contact Di to discuss potential research opportunities or collaborations.
+title: Build the next generation of DNA and RNA technologies.
+introduction: We welcome inquiries from researchers who enjoy molecular design, careful experimentation, and collaboration
+  across chemistry and biology. Contact Di Liu to discuss research fit and the availability of opportunities.
 positions:
-  - title: Graduate students
-    description: Prospective students excited by nucleic acid engineering, structural biology, chemical biology, and therapeutic design are encouraged to reach out and apply through ASU graduate programs.
-  - title: Postdoctoral researchers
-    description: The lab is seeking a postdoctoral researcher to lead RNA structure projects using cryo-EM. Prior cryo-EM experience is helpful but not required; scientific rigor and eagerness to learn are essential.
-  - title: Undergraduate researchers
-    description: Undergraduate positions are limited because each student receives close mentoring. Barrett Honors students interested in thesis work are especially encouraged to plan ahead.
-contact_title: Send a concise note about your interests.
-contact_text: Please include your background, the research direction that interests you, and relevant experience or goals. Attach a CV when appropriate.
+- title: Graduate researchers
+  description: Our projects connect synthetic nucleic acid topology, RNA structural biology, and RNA therapeutics.
+    Prospective PhD and master’s students can contact Di about research interests and relevant ASU graduate programs.
+- title: Postdoctoral researchers
+  description: Researchers with interests in nucleic acid chemistry, nanotechnology, structural biology, cryo-EM,
+    or RNA medicine are welcome to inquire about potential projects and funding availability. Include a CV and a
+    brief description of your research experience.
+- title: Undergraduate researchers
+  description: We mentor undergraduates through hands-on research and increasingly independent projects. Students
+    interested in sustained laboratory work, including Barrett Honors thesis research, are encouraged to contact
+    Di early to discuss fit and mentoring capacity.
+- title: High-school research
+  description: The lab participates in ASU’s SCience and ENgineering Experience (SCENE) program. Interested high-school
+    students should explore the program’s application process and research expectations.
+contact_title: Tell us what questions excite you.
+contact_text: Email rna@asu.edu with your background, the research direction that interests you, and your goals
+  and availability. Graduate and postdoctoral candidates should include a CV. Our mentoring emphasizes experimental
+  design, troubleshooting, critical analysis, scientific communication, and growing independence.

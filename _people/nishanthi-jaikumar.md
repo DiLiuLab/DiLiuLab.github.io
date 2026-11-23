@@ -1,18 +1,18 @@
 ---
 name: Nishanthi Jaikumar
 initials: NJ
-group: undergraduate
-role_label: High-school researcher
+group: alumni
+role_label: Lab alumnus
 role: High-school researcher
-years:
-directory_detail: ASU SCENE Program
-directory_summary: Add a concise profile summary.
+years: null
+directory_detail: Former SCENE high-school researcher
+directory_summary: Nishanthi Jaikumar is a high-school researcher in the Di Liu Lab.
 order: 8
-profile_enabled: false
+profile_enabled: true
 tinted: false
-image:
+image: null
 interests: []
 links: []
-description: Profile placeholder for Nishanthi Jaikumar.
+description: Nishanthi Jaikumar, high-school researcher in the Di Liu Lab at Arizona State University.
 ---
-Add a brief biography, research project, methods, education, presentations, or professional links when ready.
+Nishanthi Jaikumar participated in the Di Liu Lab through ASU’s SCENE high-school research program.

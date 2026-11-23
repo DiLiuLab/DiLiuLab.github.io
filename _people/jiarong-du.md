@@ -6,22 +6,14 @@ role_label: Graduate student
 role: Graduate student
 years: 2025-present
 directory_detail: 2025-present
-directory_summary: Add a concise profile summary.
+directory_summary: Jiarong Du is a graduate student in the Di Liu Lab.
 order: 2
 profile_enabled: true
 tinted: true
-image:
+image: null
 interests:
-  - RNA structure and function
-  - Nucleic acid nanotechnology
-  - Placeholder topic for a thesis project
+- Synthetic nucleic acid topology
 links: []
-description: Example graduate student detail page for the Di Liu Lab.
+description: Jiarong Du, graduate student in the Di Liu Lab at Arizona State University.
 ---
-This is an example student profile page. Add a brief biography, research project, methods used, education background, publications, presentations, or contact links when ready.
-
-### Example research interests
-
-- RNA structure and function
-- Nucleic acid nanotechnology
-- Placeholder topic for a thesis project
+Jiarong Du is a PhD student in the Di Liu Lab, joining in 2025. Jiarong is a co-first author of the submitted manuscript “Synthesis of a Molecular Four-Ring Brunnian Link.”

@@ -1,6 +1,16 @@
 - name: Bionanotechnology
-- name: Elementary Biochemistry Lab
-- name: Intro to Research Techniques
-- name: Honors Directed Study
-- name: Honors Thesis
-- name: Undergraduate Research
+  code: BCH 564
+  terms: Fall 2023; Spring 2025; Spring 2027 (scheduled)
+  description: A graduate course developed by Di Liu, connecting biomolecular design with emerging approaches in
+    nanotechnology. Physical molecular models and drawing activities help students reason about complex structures.
+- name: RNA Biochemistry
+  code: BCH 494/598
+  terms: Spring 2026
+  description: Connects RNA chemistry and biology with current developments in RNA structural biology and therapeutics.
+    Students explore molecular structures through physical models and hand-drawn representations.
+- name: Elementary Biochemistry Laboratory
+  code: BCH 367
+  terms: Fall 2024; Fall 2025
+  description: Recitation instruction and coordination of teaching assistants across laboratory sections serving
+    more than 300 undergraduate students. Ongoing teaching development explores DNA knot synthesis experiments and
+    flexible models of DNA supercoiling.

@@ -1,16 +1,12 @@
 ---
 title: New students join the lab
-date: 2025-08-01
-summary: Example article page for a people-focused lab update.
-card_summary: The group continues to grow with new graduate and undergraduate researchers.
-description: Example news detail page for new student arrivals in the Di Liu Lab.
+date: '2025-08-01'
+summary: Graduate and undergraduate researchers expanded the lab’s interdisciplinary team in 2025.
+card_summary: Graduate and undergraduate researchers expanded the lab’s interdisciplinary team in 2025.
+description: Graduate and undergraduate researchers expanded the lab’s interdisciplinary team in 2025.
 tinted: false
-image:
-image_alt:
-links:
-  - label: People
-    url: /people.html
+links: []
 ---
-This placeholder can be replaced with a short welcome post naming new students, describing their program or research interests, and linking to their profile pages when available.
+The lab welcomed PhD student Jiarong Du and master’s student Fares Sweidan in 2025. Undergraduate researchers joining in 2025 included Yash Kothari, Rohan Shrestha, Kamalesh Goggi, and Archisha Rajesh.
 
-Suggested additions include a group photo, one-sentence bios, and links to related research directions.
+Our mentoring emphasizes understanding the scientific question, designing and troubleshooting experiments, critically evaluating results, and communicating discoveries.

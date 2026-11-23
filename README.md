@@ -27,7 +27,9 @@ creation when adding a backdated story.
 - `_data/research.yml`: research directions
 - `_data/opportunities.yml`: openings and application guidance
 - `_data/publications.yml`: selected publications
-- `_data/teaching.yml`: courses and mentoring activities
+- `_data/teaching.yml`: course codes, descriptions, and teaching terms
+- `_data/innovation.yml`: public patent applications and technology translation
+- `teaching.html`: teaching philosophy, mentoring, and outreach
 - `assets/uploads/`: images uploaded through Pages CMS
 
 The `.pages.yml` file defines the editing forms. Layout and navigation are kept
@@ -47,3 +49,26 @@ Then visit <http://localhost:4000/>.
 
 GitHub Pages builds the `main` branch from the repository root. Do not restore a
 `.nojekyll` file; Jekyll processing is required for the generated pages.
+
+## November 2026 Content Update
+
+Content was reconciled against Di Liu’s November 2026 CV and personal statement.
+The two submitted manuscripts are listed separately from peer-reviewed articles;
+manuscripts in preparation and internal invention-disclosure details are omitted.
+The full review documents are not included in the public site.
+The public contact address `rna@asu.edu` is preserved from the latest remote update.
+
+People are grouped into postdoctoral, PhD, master’s, undergraduate, high-school,
+and alumni sections. Matthew Heck and Yusra Azam’s earlier records are retained
+with `published: false` because they are absent from the current CV; confirm their
+status before republishing. A member’s `profile_enabled` controls directory links,
+while `published: false` prevents Jekyll from publishing the record entirely.
+
+Existing news URLs are retained. New November roundup dates are editorial update
+dates, rather than exact dates of each award or manuscript submission.
+
+To build without writing generated output into the source tree:
+
+```bash
+jekyll _3.9.5_ build --destination /tmp/diliulab-preview
+```

@@ -1,0 +1,52 @@
+---
+layout: default
+title: Teaching & Outreach
+description: Courses, hands-on molecular models, research mentorship, and science outreach by Di Liu at Arizona
+  State University.
+---
+<section class="page-hero section-pad" id="top">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Teaching &amp; outreach</p>
+    <h1>Make molecular science tangible.</h1>
+    <p>We connect chemical and biochemical principles with current discoveries through hands-on exploration, critical thinking, and creative problem-solving.</p>
+  </div>
+</section>
+<section class="section section-pad">
+  <div class="section-heading"><h2>Courses at ASU</h2></div>
+  <div class="course-grid">
+    {% for course in site.data.teaching %}
+    <article>
+      <p class="eyebrow">{{ course.code }}</p>
+      <h3>{{ course.name }}</h3>
+      <p class="course-terms">{{ course.terms }}</p>
+      <p>{{ course.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+<section class="section section-pad tinted">
+  <div class="split teaching-split">
+    <div>
+      <p class="eyebrow">Learning through making</p>
+      <h2>Explore structure with your hands.</h2>
+      <p>3D-printed and other physical molecular models help students visualize complex DNA and RNA architectures. Drawing structures and reaction mechanisms by hand strengthens spatial reasoning and conceptual understanding.</p>
+      <p>Teaching projects in development include adapting DNA knot synthesis for undergraduate experiments and creating flexible 3D-printed models that let students manipulate and explore DNA supercoiling.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Research mentorship</p>
+      <h2>Build confidence through discovery.</h2>
+      <p>Structured guidance evolves into independent work. Trainees learn to connect experiments to scientific questions, troubleshoot thoughtfully, evaluate results critically, and share findings in presentations and manuscripts.</p>
+      <p>Students participate in research through graduate training, undergraduate projects, and Barrett Honors thesis work. Alumni have progressed to faculty positions, PhD programs, and MD/PhD training.</p>
+      <a class="text-link" href="{{ '/opportunities.html' | relative_url }}">Discuss research opportunities</a>
+    </div>
+  </div>
+</section>
+<section class="section section-pad">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Service &amp; outreach</p>
+    <h2>Share the questions. Open the lab.</h2>
+    <p>Since 2024, Di has hosted six high-school researchers through ASU’s SCience and ENgineering Experience program. Interactive demonstrations and physical models make DNA and RNA structures accessible to younger students and the public.</p>
+    <p>Community service includes judging at the Arizona Science and Engineering Fair and the 2026 Regeneron International Science and Engineering Fair, alongside proposal review, graduate thesis committees, and university service.</p>
+    <a class="text-link" href="https://eoss.asu.edu/access/scene">Learn about ASU SCENE</a>
+  </div>
+</section>

@@ -1,18 +1,18 @@
 ---
 name: Purvaj Vanga
 initials: PV
-group: undergraduate
-role_label: Undergraduate researcher
+group: alumni
+role_label: Lab alumnus
 role: Undergraduate researcher
-years: 2025-present
-directory_detail: 2025-present
-directory_summary: Add a concise profile summary.
+years: '2025'
+directory_detail: Undergraduate researcher, 2025
+directory_summary: Purvaj Vanga is a undergraduate researcher in the Di Liu Lab.
 order: 5
-profile_enabled: false
+profile_enabled: true
 tinted: false
-image:
+image: null
 interests: []
 links: []
-description: Profile placeholder for Purvaj Vanga.
+description: Purvaj Vanga, undergraduate researcher in the Di Liu Lab at Arizona State University.
 ---
-Add a brief biography, research project, methods, education, presentations, or professional links when ready.
+Purvaj Vanga was an undergraduate researcher in the Di Liu Lab in 2025.

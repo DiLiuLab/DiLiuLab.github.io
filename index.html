@@ -39,31 +39,47 @@ preload_hero: true
   </div>
   <div class="link-grid">
     <a class="summary-card" href="{{ '/research.html' | relative_url }}">
-      <span class="card-index">01</span>
       <h3>Research</h3>
       <p>DNA topology, RNA cryo-EM, and programmable mRNA therapeutics.</p>
     </a>
     <a class="summary-card" href="{{ '/people.html' | relative_url }}">
-      <span class="card-index">02</span>
       <h3>People</h3>
-      <p>Current lab members and principal investigator profile links.</p>
+      <p>Meet our team, learn about our mentoring, and catch up with alumni.</p>
     </a>
     <a class="summary-card" href="{{ '/publications.html' | relative_url }}">
-      <span class="card-index">03</span>
       <h3>Publications</h3>
-      <p>Selected papers in RNA structure and nucleic acid nanotechnology.</p>
+      <p>Peer-reviewed papers and preprints in molecular design and RNA structure.</p>
     </a>
     <a class="summary-card" href="{{ '/news.html' | relative_url }}">
-      <span class="card-index">04</span>
       <h3>News</h3>
       <p>Recent lab updates, people news, publications, and announcements.</p>
     </a>
     <a class="summary-card" href="{{ '/opportunities.html' | relative_url }}">
-      <span class="card-index">05</span>
       <h3>Join</h3>
-      <p>Openings and guidance for postdocs, graduate students, and undergraduates.</p>
+      <p>Research opportunities for postdocs, graduate students, and undergraduates.</p>
+    </a>
+    <a class="summary-card" href="{{ '/teaching.html' | relative_url }}">
+      <h3>Teaching &amp; outreach</h3>
+      <p>Hands-on molecular science, ASU courses, and pathways into research.</p>
     </a>
   </div>
+</section>
+
+<section class="section section-pad tinted">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Our science</p>
+    <h2>Three connected directions.</h2>
+    <p>Controlling how nucleic acids fold, assemble, and function creates new ways to investigate biology.</p>
+  </div>
+  <div class="research-grid">
+    {% for area in site.data.research.areas %}
+    <article class="research-card">
+      <h3>{{ area.title }}</h3>
+      <p>{{ area.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  <a class="text-link section-link" href="{{ '/research.html' | relative_url }}">Explore our research and innovation</a>
 </section>
 
 <section class="section section-pad tinted">
@@ -98,6 +114,6 @@ preload_hero: true
     <p><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
     <p><strong>Office</strong>{{ site.data.site.office }}</p>
     <p><strong>Campus</strong>{{ site.data.site.campus }}</p>
-    <p><strong>More</strong><a href="{{ '/contact.html' | relative_url }}">Contact and teaching</a></p>
+    <p><strong>More</strong><a href="{{ '/contact.html' | relative_url }}">Contact the lab</a></p>
   </div>
 </section>

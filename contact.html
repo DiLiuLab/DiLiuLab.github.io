@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact
-description: Contact information and teaching for the Di Liu Lab at Arizona State University.
+description: Contact information for the Di Liu Lab at Arizona State University.
 ---
 <section class="contact-band section-pad" id="top">
   <div class="contact-copy">
@@ -21,14 +21,14 @@ description: Contact information and teaching for the Di Liu Lab at Arizona Stat
   </div>
 </section>
 <section class="section section-pad">
-  <div class="section-heading">
-    <p class="eyebrow">Teaching</p>
-    <h2>Courses and mentoring</h2>
-  </div>
-  <div class="course-list">
-    {% for course in site.data.teaching %}
-    <span>{{ course.name }}</span>
-    {% endfor %}
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Connect</p>
+    <h2>Research, learning, and collaboration.</h2>
+    <p>For research collaborations, trainee opportunities, or questions about our work, contact Di Liu by email.</p>
+    <div class="profile-links roomy-links">
+      <a href="{{ '/opportunities.html' | relative_url }}">Research opportunities</a>
+      <a href="{{ '/teaching.html' | relative_url }}">Teaching and outreach</a>
+    </div>
   </div>
 </section>
 <section class="section section-pad tinted">

@@ -1,18 +1,18 @@
 ---
 name: Zhishang Li
 initials: ZL
-group: postdoctoral
-role_label: Postdoctoral researcher
+group: alumni
+role_label: Lab alumnus
 role: Postdoctoral researcher
-years: 2024-present
-directory_detail: 2024-present
-directory_summary: Add a concise profile summary.
+years: 2024–2026
+directory_detail: Postdoc, 2024–2026 · Associate Professor, Ocean University of China
+directory_summary: Zhishang Li is a postdoctoral researcher in the Di Liu Lab.
 order: 2
-profile_enabled: false
+profile_enabled: true
 tinted: false
-image:
+image: null
 interests: []
 links: []
-description: Profile placeholder for Zhishang Li.
+description: Zhishang Li, postdoctoral researcher in the Di Liu Lab at Arizona State University.
 ---
-Add a brief biography, research project, methods, education, publications, presentations, or professional links when ready.
+Zhishang Li was a postdoctoral researcher in the Di Liu Lab from 2024 to 2026 and is now an Associate Professor at Ocean University of China. Zhishang is a co-author of the submitted work on programmable RNA self-assembly with more than 100 unique components.
