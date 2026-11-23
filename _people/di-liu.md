@@ -11,7 +11,7 @@ directory_summary: Di Liu is an Assistant Professor at ASU. His group engineers 
 order: 1
 profile_enabled: true
 tinted: false
-image: null
+image: /assets/uploads/di-liu-asu.png
 interests:
 - Synthetic nucleic acid topology
 - RNA nanotechnology and structural biology

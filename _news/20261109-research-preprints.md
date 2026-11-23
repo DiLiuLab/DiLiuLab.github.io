@@ -23,4 +23,4 @@ This study extends the complexity of programmable RNA architectures and connects
 
 [Read the bioRxiv preprint](https://www.biorxiv.org/content/10.64898/2026.09.02.748990).
 
-Both studies are listed as submitted work in the November 2026 CV and have not been presented here as peer-reviewed publications.
+Both studies are submitted manuscripts available as preprints and have not yet been peer reviewed.
