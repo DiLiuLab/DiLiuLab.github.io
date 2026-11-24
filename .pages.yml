@@ -134,6 +134,8 @@ content:
           label: Alumni and past members
         - name: visitor
           label: Frequent visitors
+        - name: collaborator
+          label: Collaborating researcher
     - name: role_label
       label: Profile eyebrow
       type: string
@@ -197,6 +199,10 @@ content:
       label: Publish profile
       type: boolean
       default: true
+    - name: publication_titles
+      label: Publication titles to show on profile
+      type: string
+      list: true
 - name: site-content
   label: Site Content
   type: group

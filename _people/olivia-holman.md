@@ -9,7 +9,7 @@ directory_detail: Barrett Honors, 2024–2025 · MD/PhD program, University of A
 directory_summary: 'Olivia Holman: Barrett Honors, 2024–2025 · MD/PhD program, University of Arizona College of
   Medicine.'
 order: 5
-profile_enabled: false
+profile_enabled: true
 tinted: false
 image: null
 interests: []
@@ -17,3 +17,5 @@ links: []
 description: Olivia Holman, former undergraduate researcher in the Di Liu Lab.
 ---
 Olivia Holman: Barrett Honors, 2024–2025 · MD/PhD program, University of Arizona College of Medicine.
+
+{% include person-achievements.html %}

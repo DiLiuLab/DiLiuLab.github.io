@@ -14,5 +14,9 @@ image: null
 interests: []
 links: []
 description: Zhishang Li, postdoctoral researcher in the Di Liu Lab at Arizona State University.
+publication_titles:
+- Programmable Self-Assembly of RNA Nanostructures with >100 Unique Components
 ---
 Zhishang Li was a postdoctoral researcher in the Di Liu Lab from 2024 to 2026 and is now an Associate Professor at Ocean University of China. Zhishang is a co-author of the submitted work on programmable RNA self-assembly with more than 100 unique components.
+
+{% include person-achievements.html %}

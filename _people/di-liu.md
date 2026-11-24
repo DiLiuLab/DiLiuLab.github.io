@@ -24,6 +24,10 @@ links:
 - label: ORCID
   url: https://orcid.org/0000-0002-0708-7466
 description: Profile of Di Liu, principal investigator of the Di Liu Lab.
+publication_titles:
+- Synthesis of a Molecular Four-Ring Brunnian Link
+- Programmable Self-Assembly of RNA Nanostructures with >100 Unique Components
+- Accurate RNA 3D structure prediction using a language model-based deep learning approach
 ---
 Di Liu joined Arizona State University in August 2023 as an Assistant Professor in the School of Molecular Sciences and the Biodesign Center for Molecular Design and Biomimetics. His laboratory designs DNA and RNA molecules with controlled structures and properties, connecting fundamental molecular science with biotechnology and human health.
 
@@ -54,3 +58,5 @@ Di connects chemical and biochemical principles with current research through ph
 ## Service and outreach
 
 Di serves on ASU’s Committee on Undergraduate Research, reviews research proposals and graduate completion awards, and has co-chaired Biodesign Center retreats. He served as an ad hoc member of the NIH Chemical Biology & Probes Study Section in 2025 and as a judge at AzSEF and the 2026 Regeneron ISEF. Through ASU’s SCENE program, he has hosted six high-school researchers since 2024.
+
+{% include person-achievements.html %}

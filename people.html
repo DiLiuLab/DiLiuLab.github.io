@@ -89,7 +89,7 @@ description: People in the Di Liu Lab at Arizona State University.
       <h3>{{ year.name }}</h3>
       <ul>
         {% for award in year.items %}
-        <li><strong>{{ award.name }}</strong> — {{ award.award }}</li>
+        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }}</li>
         {% endfor %}
       </ul>
     </article>
@@ -100,7 +100,7 @@ description: People in the Di Liu Lab at Arizona State University.
       <ul>
         {% assign collaborator_awards = site.data.mentee_awards | where: 'group', 'collaborator' %}
         {% for award in collaborator_awards %}
-        <li><strong>{{ award.name }}</strong> — {{ award.award }} ({{ award.year }}). {{ award.note }}</li>
+        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }} ({{ award.year }}). {{ award.note }}</li>
         {% endfor %}
       </ul>
     </article>

@@ -1,0 +1,28 @@
+{% assign person_awards = site.data.mentee_awards | where: 'name', page.name | sort: 'year' | reverse %}
+{% if person_awards.size > 0 %}
+<section aria-labelledby="profile-awards">
+  <h2 id="profile-awards">Awards and honors</h2>
+  <ul>
+    {% for award in person_awards %}
+    <li><strong>{{ award.year }}</strong> — {{ award.award }}{% if award.note %}. {{ award.note }}{% endif %}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% if page.publication_titles %}
+{% assign profile_publications = site.data.publications | where_exp: 'publication', 'page.publication_titles contains publication.title' %}
+{% assign published_papers = profile_publications | where: 'status', 'published' %}
+{% assign preprints = profile_publications | where: 'status', 'preprint' %}
+{% if published_papers.size > 0 %}
+<section aria-labelledby="profile-publications">
+  <h2 id="profile-publications">{% if page.group == 'principal-investigator' %}Selected publications{% else %}Publications{% endif %}</h2>
+  {% include publication-list.html publications=published_papers heading_level=3 %}
+</section>
+{% endif %}
+{% if preprints.size > 0 %}
+<section aria-labelledby="profile-preprints">
+  <h2 id="profile-preprints">Preprints and submitted work</h2>
+  {% include publication-list.html publications=preprints heading_level=3 %}
+</section>
+{% endif %}
+{% endif %}

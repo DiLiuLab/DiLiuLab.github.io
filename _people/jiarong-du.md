@@ -15,5 +15,9 @@ interests:
 - Synthetic nucleic acid topology
 links: []
 description: Jiarong Du, graduate student in the Di Liu Lab at Arizona State University.
+publication_titles:
+- Synthesis of a Molecular Four-Ring Brunnian Link
 ---
 Jiarong Du is a PhD student in the Di Liu Lab, joining in 2025. Jiarong is a co-first author of the submitted manuscript “Synthesis of a Molecular Four-Ring Brunnian Link.”
+
+{% include person-achievements.html %}
