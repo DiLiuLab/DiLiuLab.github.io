@@ -9,41 +9,9 @@ description: People in the Di Liu Lab at Arizona State University.
     <h1>A community of molecular designers.</h1>
     <p>Researchers across chemistry, biology, and nanotechnology.</p>
     <div class="profile-links roomy-links">
-      <a href="#mentee-awards">Awards and honors</a>
+      <a href="#mentee-awards">Mentee awards and honors</a>
       <a href="#directory">People directory</a>
     </div>
-  </div>
-</section>
-
-<section class="section section-pad" id="mentee-awards">
-  <div class="section-heading compact-heading">
-    <p class="eyebrow">Trainee achievements</p>
-    <h2>Mentee awards and honors</h2>
-    <p>Celebrating awards, fellowships, scholarships, and selected conference presentations by current and former lab members.</p>
-  </div>
-  <div class="detail-shell">
-    {% assign lab_awards = site.data.mentee_awards | where: 'group', 'lab' %}
-    {% assign award_years = lab_awards | group_by: 'year' | sort: 'name' | reverse %}
-    {% for year in award_years %}
-    <article class="detail-card">
-      <h3>{{ year.name }}</h3>
-      <ul>
-        {% for award in year.items %}
-        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }}</li>
-        {% endfor %}
-      </ul>
-    </article>
-    {% endfor %}
-    <article class="detail-card">
-      <h3>Mentees in collaborating laboratories</h3>
-      <p>Awards and honors of mentees in collaborating laboratories.</p>
-      <ul>
-        {% assign collaborator_awards = site.data.mentee_awards | where: 'group', 'collaborator' %}
-        {% for award in collaborator_awards %}
-        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }} ({{ award.year }}).{% if award.note %} {{ award.note }}{% endif %}</li>
-        {% endfor %}
-      </ul>
-    </article>
   </div>
 </section>
 
@@ -109,5 +77,37 @@ description: People in the Di Liu Lab at Arizona State University.
       <a href="#mentee-awards">Mentee awards and honors</a>
       <a href="{{ '/news/20261109-trainee-achievements.html' | relative_url }}">Recent trainee achievements</a>
     </div>
+  </div>
+</section>
+
+<section class="section section-pad" id="mentee-awards">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Trainee achievements</p>
+    <h2>Mentee awards and honors</h2>
+    <p>Celebrating awards, fellowships, scholarships, and selected conference presentations by current and former lab members.</p>
+  </div>
+  <div class="detail-shell">
+    {% assign lab_awards = site.data.mentee_awards | where: 'group', 'lab' %}
+    {% assign award_years = lab_awards | group_by: 'year' | sort: 'name' | reverse %}
+    {% for year in award_years %}
+    <article class="detail-card">
+      <h3>{{ year.name }}</h3>
+      <ul>
+        {% for award in year.items %}
+        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+    <article class="detail-card">
+      <h3>Mentees in collaborating laboratories</h3>
+      <p>Awards and honors of mentees in collaborating laboratories.</p>
+      <ul>
+        {% assign collaborator_awards = site.data.mentee_awards | where: 'group', 'collaborator' %}
+        {% for award in collaborator_awards %}
+        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }} ({{ award.year }}).{% if award.note %} {{ award.note }}{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </article>
   </div>
 </section>
