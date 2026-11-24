@@ -7,7 +7,7 @@ role: PhD student
 years: 2026–present
 directory_detail: 2026–present
 directory_summary: 'Ninh Nguyen: 2026–present.'
-order: 6
+order: 5
 profile_enabled: false
 tinted: false
 image: null

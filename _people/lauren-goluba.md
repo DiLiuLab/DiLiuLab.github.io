@@ -7,7 +7,7 @@ role: Undergraduate researcher
 years: 2026–present
 directory_detail: Barrett Honors, 2026–present
 directory_summary: 'Lauren Goluba: Barrett Honors, 2026–present.'
-order: 9
+order: 7
 profile_enabled: false
 tinted: false
 image: null

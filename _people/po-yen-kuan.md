@@ -7,7 +7,7 @@ role: Master’s student
 years: 2026–present
 directory_detail: 2026–present
 directory_summary: 'Po-Yen Kuan: 2026–present.'
-order: 1
+order: 2
 profile_enabled: false
 tinted: false
 image: null

@@ -7,7 +7,7 @@ role: Postdoctoral researcher
 years: 2024–2026
 directory_detail: Postdoc, 2024–2026 · Associate Professor, Ocean University of China
 directory_summary: Zhishang Li is a postdoctoral researcher in the Di Liu Lab.
-order: 2
+order: 1
 profile_enabled: true
 tinted: false
 image: null

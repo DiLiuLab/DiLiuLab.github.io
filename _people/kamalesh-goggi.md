@@ -7,7 +7,7 @@ role: Undergraduate researcher
 years: 2025-present
 directory_detail: Barrett Honors, 2025-present
 directory_summary: Kamalesh Goggi is a undergraduate researcher in the Di Liu Lab.
-order: 7
+order: 5
 profile_enabled: false
 tinted: false
 image: null

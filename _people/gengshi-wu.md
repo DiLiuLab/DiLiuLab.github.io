@@ -7,7 +7,7 @@ role: Graduate student
 years: 2023-present
 directory_detail: Co-advised with Prof. Hao Yan, 2023-present
 directory_summary: Gengshi Wu is a graduate student in the Di Liu Lab.
-order: 4
+order: 1
 profile_enabled: false
 tinted: false
 image: null

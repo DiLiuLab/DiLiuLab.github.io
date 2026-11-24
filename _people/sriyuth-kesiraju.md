@@ -7,7 +7,7 @@ role: High-school researcher
 years: null
 directory_detail: Former SCENE high-school researcher
 directory_summary: Sriyuth Kesiraju is a high-school researcher in the Di Liu Lab.
-order: 9
+order: 10
 profile_enabled: true
 tinted: false
 image: null

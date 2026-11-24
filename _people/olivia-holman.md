@@ -8,7 +8,7 @@ years: 2024–2025
 directory_detail: Barrett Honors, 2024–2025 · MD/PhD program, University of Arizona College of Medicine
 directory_summary: 'Olivia Holman: Barrett Honors, 2024–2025 · MD/PhD program, University of Arizona College of
   Medicine.'
-order: 2
+order: 5
 profile_enabled: false
 tinted: false
 image: null

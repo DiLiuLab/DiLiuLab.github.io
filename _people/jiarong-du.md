@@ -7,7 +7,7 @@ role: Graduate student
 years: 2025-present
 directory_detail: 2025-present
 directory_summary: Jiarong Du is a graduate student in the Di Liu Lab.
-order: 2
+order: 4
 profile_enabled: true
 tinted: true
 image: null

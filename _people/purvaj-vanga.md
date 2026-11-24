@@ -7,7 +7,7 @@ role: Undergraduate researcher
 years: '2025'
 directory_detail: Undergraduate researcher, 2025
 directory_summary: Purvaj Vanga is a undergraduate researcher in the Di Liu Lab.
-order: 5
+order: 7
 profile_enabled: true
 tinted: false
 image: null

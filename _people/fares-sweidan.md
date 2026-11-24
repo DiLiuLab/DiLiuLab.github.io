@@ -7,7 +7,7 @@ role: Master’s student
 years: 2025–present
 directory_detail: 2025–present
 directory_summary: 'Fares Sweidan: 2025–present.'
-order: 2
+order: 1
 profile_enabled: false
 tinted: false
 image: null

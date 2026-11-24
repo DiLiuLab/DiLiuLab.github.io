@@ -7,7 +7,7 @@ role: Undergraduate researcher
 years: 2026–present
 directory_detail: Barrett Honors, 2026–present
 directory_summary: 'Mehnaz Rahman: Barrett Honors, 2026–present.'
-order: 10
+order: 8
 profile_enabled: false
 tinted: false
 image: null

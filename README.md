@@ -73,3 +73,15 @@ To build without writing generated output into the source tree:
 ```bash
 jekyll _3.9.5_ build --destination /tmp/diliulab-preview
 ```
+
+## People ordering and trainee honors
+
+Within each current-member category, `order` follows joining year from earliest
+to latest. Keep existing relative order for members sharing a joining year when
+more precise joining dates are unavailable. Alumni are ordered by their lab
+training level (postdoc, graduate, undergraduate, high school), then joining year.
+Unknown joining dates follow dated entries within the same training level.
+
+`_data/mentee_awards.yml` supplies the People page’s Mentee Awards and Honors
+section and can be edited in Pages CMS. Keep awards for mentees in collaborating
+laboratories in the `collaborator` group so the mentorship context stays explicit.

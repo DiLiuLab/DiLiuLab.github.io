@@ -501,3 +501,33 @@ content:
       - name: description
         label: Description
         type: text
+  - name: mentee-awards
+    label: Mentee Awards & Honors
+    type: file
+    path: _data/mentee_awards.yml
+    format: yaml
+    list: true
+    fields:
+    - name: year
+      label: Year
+      type: number
+      required: true
+    - name: name
+      label: Mentee name
+      type: string
+      required: true
+    - name: award
+      label: Award or honor
+      type: text
+      required: true
+    - name: group
+      label: Mentee group
+      type: select
+      options:
+        values:
+        - lab
+        - collaborator
+      required: true
+    - name: note
+      label: Mentoring context
+      type: text

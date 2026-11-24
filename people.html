@@ -67,6 +67,41 @@ description: People in the Di Liu Lab at Arizona State University.
     <p class="eyebrow">Mentorship</p>
     <h2>Guidance that grows into independence.</h2>
     <p>We help trainees formulate questions, design and troubleshoot experiments, analyze evidence, and communicate their work. Fellowship applications, conference presentations, and collaborative projects are part of that development.</p>
-    <a class="text-link" href="{{ '/news/20261109-trainee-achievements.html' | relative_url }}">Explore recent trainee achievements</a>
+    <div class="profile-links roomy-links">
+      <a href="#mentee-awards">Mentee awards and honors</a>
+      <a href="{{ '/news/20261109-trainee-achievements.html' | relative_url }}">Recent trainee achievements</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-pad" id="mentee-awards">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Trainee achievements</p>
+    <h2>Mentee awards and honors</h2>
+    <p>Celebrating awards, fellowships, scholarships, and selected conference presentations by current and former lab members.</p>
+  </div>
+  <div class="detail-shell">
+    {% assign lab_awards = site.data.mentee_awards | where: 'group', 'lab' %}
+    {% assign award_years = lab_awards | group_by: 'year' | sort: 'name' | reverse %}
+    {% for year in award_years %}
+    <article class="detail-card">
+      <h3>{{ year.name }}</h3>
+      <ul>
+        {% for award in year.items %}
+        <li><strong>{{ award.name }}</strong> — {{ award.award }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+    <article class="detail-card">
+      <h3>Mentees in collaborating laboratories</h3>
+      <p>Achievements by researchers in collaborating laboratories who received mentorship from Di Liu.</p>
+      <ul>
+        {% assign collaborator_awards = site.data.mentee_awards | where: 'group', 'collaborator' %}
+        {% for award in collaborator_awards %}
+        <li><strong>{{ award.name }}</strong> — {{ award.award }} ({{ award.year }}). {{ award.note }}</li>
+        {% endfor %}
+      </ul>
+    </article>
   </div>
 </section>

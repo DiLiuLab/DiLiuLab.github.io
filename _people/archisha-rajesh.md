@@ -7,7 +7,7 @@ role: Undergraduate researcher
 years: 2025–present
 directory_detail: Barrett Honors, 2025–present · Former SCENE researcher
 directory_summary: 'Archisha Rajesh: Barrett Honors, 2025–present · Former SCENE researcher.'
-order: 8
+order: 6
 profile_enabled: false
 tinted: false
 image: null
