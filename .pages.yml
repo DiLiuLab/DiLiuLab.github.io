@@ -132,6 +132,8 @@ content:
           label: High-school researchers
         - name: alumni
           label: Alumni and past members
+        - name: visitor
+          label: Frequent visitors
     - name: role_label
       label: Profile eyebrow
       type: string

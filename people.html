@@ -34,7 +34,7 @@ description: People in the Di Liu Lab at Arizona State University.
     </article>
     {% endfor %}
     <div class="people-groups">
-      {% assign group_keys = "postdoctoral,graduate,masters,undergraduate,high-school,alumni" | split: "," %}
+      {% assign group_keys = "postdoctoral,graduate,masters,undergraduate,high-school,visitor,alumni" | split: "," %}
       {% for group_key in group_keys %}
       {% assign group_people = site.people | where: "group", group_key | sort: "order" %}
       {% if group_people.size > 0 %}
@@ -44,6 +44,7 @@ description: People in the Di Liu Lab at Arizona State University.
           {% when "graduate" %}<h3>PhD students</h3>
           {% when "masters" %}<h3>Master’s students</h3>
           {% when "high-school" %}<h3>High-school researchers · SCENE</h3>
+          {% when "visitor" %}<h3>Frequent visitors</h3>
           {% when "alumni" %}<h3>Alumni and past members</h3>
           {% when "undergraduate" %}<h3>Undergraduate researchers</h3>
         {% endcase %}
