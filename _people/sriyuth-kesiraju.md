@@ -2,17 +2,17 @@
 name: Sriyuth Kesiraju
 initials: SK
 group: alumni
-role_label: Lab alumnus
-role: High-school researcher
+role_label: Former high-school researcher
+role: Former high-school researcher
 years: null
-directory_detail: Former SCENE high-school researcher
-directory_summary: Sriyuth Kesiraju is a high-school researcher in the Di Liu Lab.
+directory_detail: High-school researcher (SCENE)
+directory_summary: Sriyuth Kesiraju was a high-school researcher in the Di Liu Lab.
 order: 10
 profile_enabled: true
 tinted: false
 image: null
 interests: []
 links: []
-description: Sriyuth Kesiraju, high-school researcher in the Di Liu Lab at Arizona State University.
+description: Sriyuth Kesiraju, former high-school researcher in the Di Liu Lab.
 ---
 Sriyuth Kesiraju participated in the Di Liu Lab through ASU’s SCENE high-school research program.

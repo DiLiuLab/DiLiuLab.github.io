@@ -5,8 +5,8 @@ group: alumni
 role_label: Former high-school researcher
 role: Former high-school researcher
 years: 2024–2025
-directory_detail: SCENE, 2024–2025 · Undergraduate, University of Pennsylvania
-directory_summary: 'Elaine Tang: SCENE, 2024–2025 · Undergraduate, University of Pennsylvania.'
+directory_detail: High-school researcher (SCENE), 2024–2025 · Undergraduate, University of Pennsylvania
+directory_summary: Elaine Tang was a high-school researcher in the Di Liu Lab.
 order: 8
 profile_enabled: false
 tinted: false
