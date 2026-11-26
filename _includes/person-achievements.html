@@ -10,6 +10,7 @@
 </section>
 {% endif %}
 {% if page.publication_titles %}
+{% include authorship-legend.html %}
 {% assign profile_publications = site.data.publications | where_exp: 'publication', 'page.publication_titles contains publication.title' %}
 {% assign published_papers = profile_publications | where: 'status', 'published' %}
 {% assign preprints = profile_publications | where: 'status', 'preprint' %}

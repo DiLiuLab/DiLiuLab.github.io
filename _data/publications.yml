@@ -5,8 +5,13 @@
   citation: ChemRxiv. Submitted manuscript.
   url: https://chemrxiv.org/doi/full/10.26434/chemrxiv.15011914/v1
   status: preprint
-  note: 'Di Liu: corresponding author.'
+  note: ''
   era: ASU
+  equal_contributors:
+  - C. Li
+  - J. Du
+  corresponding_authors:
+  - D. Liu
 - year: 2026
   title: Programmable Self-Assembly of RNA Nanostructures with >100 Unique Components
   authors: L. Chen, Z. Li, J. Yan, S. Dey, C. Li, A. Petrova, A. Prasad, D. Satyabola, K. DeVore, X. Tu, Y. Qu,
@@ -14,8 +19,15 @@
   citation: bioRxiv. Submitted manuscript.
   url: https://www.biorxiv.org/content/10.64898/2026.09.02.748990
   status: preprint
-  note: 'Di Liu: co-corresponding author.'
+  note: ''
   era: ASU
+  equal_contributors: []
+  corresponding_authors:
+  - D. Wen
+  - J. C.-Y. Wang
+  - H. Yan
+  - P. Yin
+  - D. Liu
 - year: 2024
   title: Accurate RNA 3D structure prediction using a language model-based deep learning approach
   authors: T. Shen, Z. Hu, S. Sun, D. Liu, F. Wong, J. Wang, J. Chen, Y. Wang, L. Hong, J. Xiao, L. Zheng, T. Krishnamoorthi,
@@ -23,16 +35,34 @@
   citation: Nature Methods 21, 2287–2298.
   url: https://doi.org/10.1038/s41592-024-02487-0
   status: published
-  note: 'Di Liu: co-first and co-corresponding author.'
+  note: ''
   era: ASU
+  equal_contributors:
+  - T. Shen
+  - Z. Hu
+  - S. Sun
+  - D. Liu
+  corresponding_authors:
+  - S. Sun
+  - D. Liu
+  - S. Wang
+  - P. Yin
+  - J. J. Collins
+  - Y. Li
 - year: 2022
   title: Sub-3-Å cryo-EM structure of RNA enabled by engineered homomeric self-assembly
   authors: D. Liu, F. A. Thelot, J. A. Piccirilli, M. Liao, P. Yin.
   citation: Nature Methods 19, 576–585.
   url: https://doi.org/10.1038/s41592-022-01455-w
   status: published
-  note: 'Di Liu: co-first author.'
+  note: ''
   era: Before ASU
+  equal_contributors:
+  - D. Liu
+  - F. A. Thelot
+  corresponding_authors:
+  - M. Liao
+  - P. Yin
 - year: 2021
   title: eccDNAs are apoptotic products with high innate immunostimulatory activity
   authors: Y. Wang, M. Wang, M. N. Djekidel, H. Chen, D. Liu, F. W. Alt, Y. Zhang.
@@ -41,15 +71,24 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - Y. Zhang
 - year: 2021
   title: Structures of artificially designed discrete RNA nanoarchitectures at near-atomic resolution
   authors: D. Liu, Y. Shao, J. A. Piccirilli, Y. Weizmann.
   citation: Science Advances 7, eabf4459.
   url: https://doi.org/10.1126/sciadv.abf4459
   status: published
-  note: 'Di Liu: co-first author.'
+  note: ''
   era: Before ASU
   cover_url: https://www.science.org/toc/sciadv/7/39
+  equal_contributors:
+  - D. Liu
+  - Y. Shao
+  corresponding_authors:
+  - J. A. Piccirilli
+  - Y. Weizmann
 - year: 2021
   title: Three-dimensional nanolithography guided by DNA modular epitaxy
   authors: J. Shen, W. Sun, D. Liu, T. Schaus, P. Yin.
@@ -58,6 +97,9 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - P. Yin
 - year: 2020
   title: Branched kissing loops for the construction of diverse RNA homooligomeric nanostructures
   authors: D. Liu, C. W. Geary, G. Chen, Y. Shao, M. Li, C. Mao, E. S. Andersen, J. A. Piccirilli, P. W. K. Rothemund,
@@ -67,6 +109,10 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - P. W. K. Rothemund
+  - Y. Weizmann
 - year: 2019
   title: Regioselective surface encoding of nanoparticles for programmable self-assembly
   authors: G. Chen, K. J. Gibson, D. Liu, H. C. Rees, J.-H. Lee, W. Xia, R. Lin, H. L. Xin, O. Gang, Y. Weizmann.
@@ -75,6 +121,11 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors:
+  - G. Chen
+  - K. J. Gibson
+  corresponding_authors:
+  - Y. Weizmann
 - year: 2018
   title: In vivo Production of RNA Nanostructures via Programmed Folding of Single-stranded RNAs
   authors: M. Li, M. Zheng, S. Wu, C. Tian, D. Liu, Y. Weizmann, W. Jiang, G. Wang, C. Mao.
@@ -83,6 +134,10 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - G. Wang
+  - C. Mao
 - year: 2017
   title: Synthesizing Topological Structures Containing RNA
   authors: D. Liu, Y. Shao, G. Chen, Y. Tse-Dinh, J. A. Piccirilli, Y. Weizmann.
@@ -91,6 +146,9 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - Y. Weizmann
 - year: 2016
   title: Creating Complex Molecular Topologies by Configuring DNA Four-way Junctions
   authors: D. Liu, G. Chen, U. Akhter, T. M. Cronin, Y. Weizmann.
@@ -100,6 +158,9 @@
   note: ''
   era: Before ASU
   cover_url: https://www.nature.com/nchem/volumes/8/issues/10
+  equal_contributors: []
+  corresponding_authors:
+  - Y. Weizmann
 - year: 2016
   title: Mesenchymal Stem Cell and Derived Exosome as Small RNA Carrier and Immunomodulator to Improve Islet Transplantation
   authors: D. Wen, Y. Peng, D. Liu, Y. Weizmann, R. I. Mahato.
@@ -108,15 +169,24 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - R. I. Mahato
 - year: 2015
   title: Enzymatic Synthesis of Periodic DNA Nanoribbons for Intracellular pH Sensing and Gene Silencing
   authors: G. Chen, D. Liu, C. He, T. R. Gannet, W. Lin, Y. Weizmann.
   citation: Journal of the American Chemical Society 137, 3844–3851.
   url: https://doi.org/10.1021/ja512665z
   status: published
-  note: 'Di Liu: co-first author.'
+  note: ''
   era: Before ASU
   cover_url: https://pubs.acs.org/toc/jacsat/137/11
+  equal_contributors:
+  - G. Chen
+  - D. Liu
+  - C. He
+  corresponding_authors:
+  - Y. Weizmann
 - year: 2012
   title: Synthesis and Photoactivity of a Pt(II) Complex Based on an o-Nitrobenzyl-derived Ligand
   authors: D. Liu, J. L. Ma, W. Zhou, W. J. He, Z. J. Guo.
@@ -125,6 +195,10 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - W. J. He
+  - Z. J. Guo
 - year: 2012
   title: Computer Modeling of Linear Condensation Polymerization
   authors: D. Liu, H. F. Zhang, Y. Lu.
@@ -133,6 +207,9 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - Y. Lu
 - year: 2011
   title: Computer Modeling of Probability Effect in the Chemical Reactions of Polymers
   authors: D. Liu, H. F. Zhang, Y. Lu.
@@ -141,3 +218,6 @@
   status: published
   note: ''
   era: Before ASU
+  equal_contributors: []
+  corresponding_authors:
+  - Y. Lu

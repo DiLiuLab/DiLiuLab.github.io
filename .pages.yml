@@ -422,6 +422,14 @@ content:
     - name: cover_url
       label: Cover Story URL
       type: string
+    - name: equal_contributors
+      label: Equal-contribution authors (exact initials and surnames)
+      type: string
+      list: true
+    - name: corresponding_authors
+      label: Corresponding authors (exact initials and surnames)
+      type: string
+      list: true
   - name: teaching
     label: Teaching
     type: file
