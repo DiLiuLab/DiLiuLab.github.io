@@ -1,0 +1,8 @@
+{% if page.publication_titles %}
+{% assign article_publications = site.data.publications | where_exp: 'publication', 'page.publication_titles contains publication.title' %}
+<section aria-labelledby="related-publications">
+  <h2 id="related-publications">Related publications and preprints</h2>
+  {% include authorship-legend.html %}
+  {% include publication-list.html publications=article_publications heading_level=3 %}
+</section>
+{% endif %}

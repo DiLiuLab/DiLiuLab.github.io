@@ -18,7 +18,7 @@ publication_titles:
 - Synthesis of a Molecular Four-Ring Brunnian Link
 - Programmable Self-Assembly of RNA Nanostructures with >100 Unique Components
 ---
-Cong Li joined the Di Liu Lab as a postdoctoral researcher in 2024. Cong is a co-first author of the submitted manuscript “Synthesis of a Molecular Four-Ring Brunnian Link.”
+Cong Li joined the Di Liu Lab as a postdoctoral researcher in 2024. Cong contributed to the submitted manuscript “Synthesis of a Molecular Four-Ring Brunnian Link.”
 
 In 2026, Cong received an NSF DNA32 Travel Grant and gave a selected oral presentation at DNA32.
 

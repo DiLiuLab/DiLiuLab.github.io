@@ -29,6 +29,6 @@ Jiarong Du is a Chemistry PhD student in Prof. Di Liu’s lab at Arizona State U
 
 His research focuses on designing DNA knots, links, and supercoiled minicircles to investigate topoisomerase activity and protein recognition, and developing fluorescence-based assays for inhibitor screening. He also contributes to AZBMOST, a computational toolkit for nucleic acid nanostructure design.
 
-Jiarong is a co-first author of the submitted manuscript “Synthesis of a Molecular Four-Ring Brunnian Link.”
+Jiarong contributed to the submitted manuscript “Synthesis of a Molecular Four-Ring Brunnian Link.”
 
 {% include person-achievements.html %}

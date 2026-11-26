@@ -39,7 +39,7 @@ Di Liu joined Arizona State University in August 2023 as an Assistant Professor 
 
 ## Research
 
-Di’s work spans synthetic nucleic acid topology, engineered RNA assemblies, and RNA structure determination. His contributions include DNA four-way junction approaches to complex molecular topologies, RNA branched kissing-loop motifs, and engineered RNA self-assembly for sub-3-Å cryo-EM. He co-developed RhoFold+, a language model-based RNA structure prediction platform reported in *Nature Methods* in 2024, as a co-first and co-corresponding author.
+Di’s work spans synthetic nucleic acid topology, engineered RNA assemblies, and RNA structure determination. His contributions include DNA four-way junction approaches to complex molecular topologies, RNA branched kissing-loop motifs, and engineered RNA self-assembly for sub-3-Å cryo-EM. He co-developed RhoFold+, a language model-based RNA structure prediction platform reported in *Nature Methods* in 2024.
 
 At ASU, the group is extending these approaches to complex DNA and RNA architectures and chemical strategies for RNA therapeutics. A collaboration with Dr. Eric Tran at Providence Cancer Institute received the 2026 Stand Up To Cancer–Nina Nicolai Pancreatic Cancer Innovation in Collaboration Award.
 

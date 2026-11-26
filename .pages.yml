@@ -87,6 +87,10 @@ content:
       label: Article
       type: rich-text
       required: true
+    - name: publication_titles
+      label: Related publication titles
+      type: string
+      list: true
   - name: people
     label: People
     type: collection
