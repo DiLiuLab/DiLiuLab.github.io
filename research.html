@@ -77,7 +77,7 @@ description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, 
     {% for patent in site.data.innovation.patents %}
     <article>
       <p class="publication-meta">{{ patent.year }} · Published patent application</p>
-      <h3><a href="https://patents.google.com/patent/{{ patent.number }}/en">{{ patent.title }}</a></h3>
+      <h3><a href="{% if patent.url and patent.url != empty %}{{ patent.url }}{% else %}https://patents.google.com/patent/{{ patent.number }}/en{% endif %}">{{ patent.title }}</a></h3>
       <p>{{ patent.number }}{% if patent.note %}<br>{{ patent.note }}{% endif %}</p>
     </article>
     {% endfor %}

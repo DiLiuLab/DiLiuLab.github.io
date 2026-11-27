@@ -483,6 +483,9 @@ content:
       - name: note
         label: Note
         type: text
+      - name: url
+        label: Patent record URL (optional)
+        type: string
   - name: software
     label: Software & Resources
     type: file
