@@ -20,17 +20,6 @@ preload_hero: true
   </div>
 </section>
 
-<section class="intro-band" aria-label="Lab snapshot">
-  <div class="intro-grid">
-    {% for metric in site.data.site.metrics %}
-    <div>
-      <span class="metric">{{ metric.value }}</span>
-      <p>{{ metric.label }}</p>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
 <section class="section section-pad">
   <div class="section-heading compact-heading">
     <p class="eyebrow">Overview</p>
