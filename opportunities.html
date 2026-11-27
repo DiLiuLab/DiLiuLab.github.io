@@ -17,21 +17,29 @@ description: Openings and research opportunities in the Di Liu Lab.
     {% include page-banner.html %}
   </div>
 </section>
-<section class="section section-pad tinted">
+<section class="section section-pad">
   <div class="join-grid">
     {% for position in site.data.opportunities.positions %}
+    {% assign position_title = position.title | downcase %}
+    {% assign position_icon = 'flask' %}
+    {% if position_title contains 'postdoc' %}{% assign position_icon = 'flask' %}{% elsif position_title contains 'undergraduate' %}{% assign position_icon = 'tube' %}{% elsif position_title contains 'graduate' or position_title contains 'phd' or position_title contains 'master' %}{% assign position_icon = 'cap' %}{% elsif position_title contains 'high-school' or position_title contains 'high school' %}{% assign position_icon = 'bulb' %}{% endif %}
     <article>
-      <h3>{{ position.title }}</h3>
-      <p>{{ position.description }}</p>
+      <span class="card-icon">{% include icon.html name=position_icon %}</span>
+      <div>
+        <h3>{{ position.title }}</h3>
+        <p>{{ position.description }}</p>
+      </div>
     </article>
     {% endfor %}
   </div>
 </section>
-<section class="section section-pad">
-  <div class="section-heading compact-heading">
-    <p class="eyebrow">How to reach out</p>
-    <h2>{{ site.data.opportunities.contact_title }}</h2>
-    <p>{{ site.data.opportunities.contact_text }}</p>
-    <a class="button primary" href="mailto:{{ site.data.site.email }}">Email Di Liu</a>
+<section class="section section-pad tinted">
+  <div class="cta-panel">
+    <div>
+      <p class="eyebrow">How to reach out</p>
+      <h2>{{ site.data.opportunities.contact_title }}</h2>
+      <p>{{ site.data.opportunities.contact_text }}</p>
+    </div>
+    <a class="button gold" href="mailto:{{ site.data.site.email }}">{% include icon.html name="mail" %}Email Di Liu</a>
   </div>
 </section>

@@ -20,6 +20,7 @@ description: Recent news and updates from the Di Liu Lab at Arizona State Univer
         <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
         <p>{{ item.card_summary | default: item.summary }}</p>
       </div>
+      {% include icon.html name="arrow-right" class="news-arrow" %}
     </article>
     {% endfor %}
   </div>

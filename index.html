@@ -5,16 +5,18 @@ full_title: Di Liu Lab | Nucleic Acid Engineering at ASU
 description: The Di Liu Lab at Arizona State University engineers DNA and RNA nanoarchitectures to study topology, solve RNA structures, and improve RNA therapeutics.
 preload_hero: true
 ---
+{% assign hero_title = site.data.site.hero_title %}
+{% assign hero_parts = hero_title | split: '. ' %}
 <section class="hero home-hero section-pad" id="top">
   <div class="hero-media" aria-hidden="true">
     <img src="{{ site.data.site.hero_image | relative_url }}" alt="">
   </div>
   <div class="hero-content">
     <p class="eyebrow">{{ site.data.site.tagline }}</p>
-    <h1>{{ site.data.site.hero_title }}</h1>
+    <h1>{% if hero_parts.size == 2 %}{{ hero_parts[0] }}.<br><em>{{ hero_parts[1] }}</em>{% else %}{{ hero_title }}{% endif %}</h1>
     <p class="hero-copy">{{ site.data.site.hero_text }}</p>
     <div class="hero-actions" aria-label="Primary actions">
-      <a class="button primary" href="{{ '/research.html' | relative_url }}">Research</a>
+      <a class="button primary" href="{{ '/research.html' | relative_url }}">Research{% include icon.html name="arrow-right" %}</a>
       <a class="button secondary" href="{{ '/opportunities.html' | relative_url }}">Join us</a>
     </div>
   </div>
@@ -28,27 +30,33 @@ preload_hero: true
   </div>
   <div class="link-grid">
     <a class="summary-card" href="{{ '/research.html' | relative_url }}">
-      <h3>Research</h3>
+      <span class="card-icon">{% include icon.html name="helix" %}</span>
+      <h3>Research{% include icon.html name="arrow-right" class="card-arrow" %}</h3>
       <p>DNA topology, RNA cryo-EM, and programmable mRNA therapeutics.</p>
     </a>
     <a class="summary-card" href="{{ '/people.html' | relative_url }}">
-      <h3>People</h3>
+      <span class="card-icon">{% include icon.html name="users" %}</span>
+      <h3>People{% include icon.html name="arrow-right" class="card-arrow" %}</h3>
       <p>Meet our team, learn about our mentoring, and catch up with alumni.</p>
     </a>
     <a class="summary-card" href="{{ '/publications.html' | relative_url }}">
-      <h3>Publications</h3>
+      <span class="card-icon">{% include icon.html name="book" %}</span>
+      <h3>Publications{% include icon.html name="arrow-right" class="card-arrow" %}</h3>
       <p>Peer-reviewed papers and preprints in molecular design and RNA structure.</p>
     </a>
     <a class="summary-card" href="{{ '/news.html' | relative_url }}">
-      <h3>News</h3>
+      <span class="card-icon">{% include icon.html name="news" %}</span>
+      <h3>News{% include icon.html name="arrow-right" class="card-arrow" %}</h3>
       <p>Recent lab updates, people news, publications, and announcements.</p>
     </a>
     <a class="summary-card" href="{{ '/opportunities.html' | relative_url }}">
-      <h3>Join</h3>
+      <span class="card-icon">{% include icon.html name="user-plus" %}</span>
+      <h3>Join{% include icon.html name="arrow-right" class="card-arrow" %}</h3>
       <p>Research opportunities for postdocs, graduate students, and undergraduates.</p>
     </a>
     <a class="summary-card" href="{{ '/teaching.html' | relative_url }}">
-      <h3>Teaching &amp; outreach</h3>
+      <span class="card-icon">{% include icon.html name="cap" %}</span>
+      <h3>Teaching &amp; outreach{% include icon.html name="arrow-right" class="card-arrow" %}</h3>
       <p>Hands-on molecular science, ASU courses, and pathways into research.</p>
     </a>
   </div>
@@ -63,24 +71,28 @@ preload_hero: true
   <div class="research-grid">
     {% for area in site.data.research.areas %}
     <article class="research-card">
+      <span class="card-icon">{% include research-icon.html title=area.title %}</span>
       <h3>{{ area.title }}</h3>
       <p>{{ area.description }}</p>
     </article>
     {% endfor %}
   </div>
   <a class="text-link section-link" href="{{ '/research.html' | relative_url }}">Explore our research and innovation</a>
-  <div class="section-heading compact-heading software-home">
-    <h3>Software for molecular design</h3>
-    <p>Explore AZBMOST for building and manipulating molecular structures, and find more tools on our lab’s GitHub.</p>
+  <div class="software-callout">
+    <span class="card-icon">{% include icon.html name="cube" %}</span>
+    <div>
+      <h3>Software for molecular design</h3>
+      <p>Explore AZBMOST for building and manipulating molecular structures, and find more tools on our lab’s GitHub.</p>
+    </div>
     <div class="profile-links">
-      <a href="{{ site.data.software.project_url }}">AZBMOST</a>
-      <a href="{{ site.data.software.github_url }}">Lab GitHub</a>
+      <a href="{{ site.data.software.project_url }}">{% include icon.html name="cube" %}AZBMOST</a>
+      <a href="{{ site.data.software.github_url }}">{% include icon.html name="code" %}Lab GitHub</a>
       <a href="{{ '/research.html#software' | relative_url }}">About our software</a>
     </div>
   </div>
 </section>
 
-<section class="section section-pad tinted">
+<section class="section section-pad">
   <div class="section-heading">
     <p class="eyebrow">Recent updates</p>
     <h2>Latest news</h2>
@@ -109,9 +121,9 @@ preload_hero: true
     </p>
   </div>
   <div class="contact-card">
-    <p><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
-    <p><strong>Office</strong>{{ site.data.site.office }}</p>
-    <p><strong>Campus</strong>{{ site.data.site.campus }}</p>
-    <p><strong>More</strong><a href="{{ '/contact.html' | relative_url }}">Contact the lab</a></p>
+    <p><span class="contact-icon">{% include icon.html name="mail" %}</span><span><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></span></p>
+    <p><span class="contact-icon">{% include icon.html name="pin" %}</span><span><strong>Office</strong>{{ site.data.site.office }}</span></p>
+    <p><span class="contact-icon">{% include icon.html name="building" %}</span><span><strong>Campus</strong>{{ site.data.site.campus }}</span></p>
+    <p><span class="contact-icon">{% include icon.html name="arrow-right" %}</span><span><strong>More</strong><a href="{{ '/contact.html' | relative_url }}">Contact the lab</a></span></p>
   </div>
 </section>

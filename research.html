@@ -14,7 +14,7 @@ description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, 
   <div class="research-grid">
     {% for area in site.data.research.areas %}
     <article class="research-card">
-
+      <span class="card-icon">{% include research-icon.html title=area.title %}</span>
       <h2>{{ area.title }}</h2>
       <p>{{ area.description }}</p>
       <ul>
@@ -48,7 +48,10 @@ description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, 
   </div>
   <div class="split">
     <article class="research-card">
-      <h3>{{ site.data.software.project_name }}</h3>
+      <div class="card-head">
+        <span class="card-icon">{% include icon.html name="cube" %}</span>
+        <h3>{{ site.data.software.project_name }}</h3>
+      </div>
       <p><strong>{{ site.data.software.project_expansion }}</strong></p>
       <p>{{ site.data.software.project_description }}</p>
       <ul>
@@ -56,18 +59,21 @@ description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, 
         <li><strong>{{ tool.name }}</strong>: {{ tool.description }}</li>
         {% endfor %}
       </ul>
-      <div class="profile-links roomy-links"><a href="{{ site.data.software.project_url }}">Explore AZBMOST on GitHub</a></div>
+      <div class="profile-links"><a href="{{ site.data.software.project_url }}">{% include icon.html name="code" %}Explore AZBMOST on GitHub</a></div>
     </article>
     <article class="research-card">
-      <h3>Di Liu Lab on GitHub</h3>
+      <div class="card-head">
+        <span class="card-icon">{% include icon.html name="code" %}</span>
+        <h3>Di Liu Lab on GitHub</h3>
+      </div>
       <p>Find our public repositories for nucleic acid design, molecular topology, structural analysis, and scientific visualization.</p>
       <p>Browse the code and project documentation to learn how to use the tools and follow their development.</p>
-      <div class="profile-links roomy-links"><a href="{{ site.data.software.github_url }}">Browse lab repositories</a></div>
+      <div class="profile-links"><a href="{{ site.data.software.github_url }}">{% include icon.html name="code" %}Browse lab repositories</a></div>
     </article>
   </div>
 </section>
 
-<section class="section section-pad tinted">
+<section class="section section-pad">
   <div class="section-heading compact-heading">
     <p class="eyebrow">Innovation</p>
     <h2>{{ site.data.innovation.title }}</h2>
@@ -76,9 +82,10 @@ description: "Research directions in the Di Liu Lab: DNA topology, RNA cryo-EM, 
   <div class="patent-grid">
     {% for patent in site.data.innovation.patents %}
     <article>
-      <p class="publication-meta">{{ patent.year }} · Published patent application</p>
+      <p class="publication-meta">{% include icon.html name="bulb" %}{{ patent.year }} · Published patent application</p>
       <h3><a href="{% if patent.url and patent.url != empty %}{{ patent.url }}{% else %}https://patents.google.com/patent/{{ patent.number }}/en{% endif %}">{{ patent.title }}</a></h3>
       <p>{{ patent.number }}{% if patent.note %}<br>{{ patent.note }}{% endif %}</p>
+      {% include icon.html name="arrow-up-right" class="patent-arrow" %}
     </article>
     {% endfor %}
   </div>

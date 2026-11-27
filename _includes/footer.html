@@ -1,4 +1,43 @@
 <footer class="site-footer">
-  <p>&copy; <span data-year></span> {{ site.data.site.lab_name }}. {{ site.data.site.institution }}.</p>
-  <a href="#top">Back to top</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="{{ '/index.html' | relative_url }}" aria-label="Di Liu Lab home">
+        <span class="brand-mark">{% include logo-mark.html %}</span>
+        <span class="brand-text">
+          <strong>{{ site.data.site.lab_name }}</strong>
+          <small>{{ site.data.site.brand_subtitle }}</small>
+        </span>
+      </a>
+      <p>
+        {{ site.data.site.school }}<br>
+        {{ site.data.site.center }}
+      </p>
+      <a class="footer-email" href="mailto:{{ site.data.site.email }}">{% include icon.html name="mail" %}{{ site.data.site.email }}</a>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <p class="footer-title">Explore</p>
+      <ul>
+        <li><a href="{{ '/research.html' | relative_url }}">Research</a></li>
+        <li><a href="{{ '/people.html' | relative_url }}">People</a></li>
+        <li><a href="{{ '/publications.html' | relative_url }}">Publications</a></li>
+        <li><a href="{{ '/news.html' | relative_url }}">News</a></li>
+        <li><a href="{{ '/opportunities.html' | relative_url }}">Join</a></li>
+        <li><a href="{{ '/teaching.html' | relative_url }}">Teaching</a></li>
+        <li><a href="{{ '/photos.html' | relative_url }}">Photos</a></li>
+        <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer-connect">
+      <p class="footer-title">Connect</p>
+      <ul>
+        {% for link in site.data.site.external_links %}
+        <li><a href="{{ link.url }}">{% include link-icon.html label=link.label url=link.url %}{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span data-year></span> {{ site.data.site.lab_name }}. {{ site.data.site.institution }}.</p>
+    <a href="#top">Back to top{% include icon.html name="arrow-up" %}</a>
+  </div>
 </footer>

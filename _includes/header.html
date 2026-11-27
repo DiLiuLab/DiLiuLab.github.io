@@ -1,8 +1,8 @@
 <header class="site-header" data-header>
   <nav class="nav-shell" aria-label="Primary navigation">
     <a class="brand" href="{{ '/index.html' | relative_url }}" aria-label="Di Liu Lab home">
-      <span class="brand-mark" aria-hidden="true">DL</span>
-      <span>
+      <span class="brand-mark">{% include logo-mark.html %}</span>
+      <span class="brand-text">
         <strong>{{ site.data.site.lab_name }}</strong>
         <small>{{ site.data.site.brand_subtitle }}</small>
       </span>

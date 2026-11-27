@@ -14,10 +14,10 @@ description: Contact information for the Di Liu Lab at Arizona State University.
     </p>
   </div>
   <div class="contact-card">
-    <p><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></p>
-    <p><strong>Office</strong>{{ site.data.site.office }}</p>
-    <p><strong>Mail code</strong>{{ site.data.site.mail_code }}</p>
-    <p><strong>Campus</strong>{{ site.data.site.campus }}</p>
+    <p><span class="contact-icon">{% include icon.html name="mail" %}</span><span><strong>Email</strong><a href="mailto:{{ site.data.site.email }}">{{ site.data.site.email }}</a></span></p>
+    <p><span class="contact-icon">{% include icon.html name="pin" %}</span><span><strong>Office</strong>{{ site.data.site.office }}</span></p>
+    <p><span class="contact-icon">{% include icon.html name="hash" %}</span><span><strong>Mail code</strong>{{ site.data.site.mail_code }}</span></p>
+    <p><span class="contact-icon">{% include icon.html name="building" %}</span><span><strong>Campus</strong>{{ site.data.site.campus }}</span></p>
   </div>
 </section>
 <section class="section section-pad">
@@ -26,19 +26,23 @@ description: Contact information for the Di Liu Lab at Arizona State University.
     <h2>Research, learning, and collaboration.</h2>
     <p>For research collaborations, trainee opportunities, or questions about our work, contact Di Liu by email.</p>
     <div class="profile-links roomy-links">
-      <a href="{{ '/opportunities.html' | relative_url }}">Research opportunities</a>
-      <a href="{{ '/teaching.html' | relative_url }}">Teaching and outreach</a>
+      <a href="{{ '/opportunities.html' | relative_url }}">{% include icon.html name="user-plus" %}Research opportunities</a>
+      <a href="{{ '/teaching.html' | relative_url }}">{% include icon.html name="cap" %}Teaching and outreach</a>
     </div>
   </div>
 </section>
 <section class="section section-pad tinted">
   <div class="section-heading compact-heading">
     <p class="eyebrow">Links</p>
-    <h2>External profiles</h2>
-    <div class="profile-links roomy-links">
-      {% for link in site.data.site.external_links %}
-      <a href="{{ link.url }}">{{ link.label }}</a>
-      {% endfor %}
-    </div>
+    <h2>Profiles and software</h2>
+  </div>
+  <div class="link-cards">
+    {% for link in site.data.site.external_links %}
+    <a class="link-card" href="{{ link.url }}">
+      <span class="card-icon">{% include link-icon.html label=link.label url=link.url %}</span>
+      <span>{{ link.label }}</span>
+      {% include icon.html name="arrow-up-right" class="link-card-arrow" %}
+    </a>
+    {% endfor %}
   </div>
 </section>

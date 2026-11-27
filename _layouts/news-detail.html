@@ -1,11 +1,13 @@
 ---
 layout: default
 ---
-<section class="page-hero section-pad" id="top">
-  <div class="section-heading compact-heading">
-    <p class="eyebrow">{{ page.date | date: "%B %Y" }}</p>
-    <h1>{{ page.title }}</h1>
-    {% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+<section class="page-hero detail-hero section-pad" id="top">
+  <div class="detail-hero-inner">
+    <div class="section-heading compact-heading">
+      <p class="eyebrow"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %Y" }}</time></p>
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}<p>{{ page.summary }}</p>{% endif %}
+    </div>
   </div>
 </section>
 <section class="section section-pad{% if page.tinted %} tinted{% endif %}">
@@ -15,10 +17,10 @@ layout: default
       <img class="detail-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}">
       {% endif %}
       {{ content }}
-      <div class="profile-links roomy-links">
-        <a href="{{ '/news.html' | relative_url }}">Back to news</a>
+      <div class="profile-links">
+        <a href="{{ '/news.html' | relative_url }}">{% include icon.html name="news" %}Back to news</a>
         {% for link in page.links %}
-        <a href="{{ link.url }}">{{ link.label }}</a>
+        <a href="{{ link.url }}">{% include link-icon.html label=link.label url=link.url %}{{ link.label }}</a>
         {% endfor %}
       </div>
     </article>

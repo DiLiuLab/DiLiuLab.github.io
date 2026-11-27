@@ -12,7 +12,7 @@ banner_image: /assets/banners/lab-group-2026.webp
     <p>Group photos and shared moments from our lab community.</p>
     <nav class="profile-links roomy-links" aria-label="Photo years">
       {% for year in photo_years %}
-      <a href="#photos-{{ year.name }}">{{ year.name }}</a>
+      <a href="#photos-{{ year.name }}">{% include icon.html name="camera" %}{{ year.name }}</a>
       {% endfor %}
     </nav>
   </div>
@@ -22,14 +22,16 @@ banner_image: /assets/banners/lab-group-2026.webp
     {% for year in photo_years %}
     <section class="photo-year" id="photos-{{ year.name }}" aria-labelledby="photo-year-{{ year.name }}">
       <h2 id="photo-year-{{ year.name }}">{{ year.name }}</h2>
-      {% for photo in year.items %}
-      <figure class="archive-photo">
-        <a href="{{ photo.image | relative_url }}" aria-label="View full photo: {{ photo.title | escape }}, {{ photo.year }}">
-          <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | escape }}" width="2400" height="1800"{% if forloop.parentloop.first and forloop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
-        </a>
-        <figcaption>{{ photo.title }} <span>· {{ photo.year }}</span></figcaption>
-      </figure>
-      {% endfor %}
+      <div class="photo-year-items">
+        {% for photo in year.items %}
+        <figure class="archive-photo">
+          <a href="{{ photo.image | relative_url }}" aria-label="View full photo: {{ photo.title | escape }}, {{ photo.year }}">
+            <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | escape }}" width="2400" height="1800"{% if forloop.parentloop.first and forloop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+          </a>
+          <figcaption>{% include icon.html name="camera" %}{{ photo.title }} <span>· {{ photo.year }}</span></figcaption>
+        </figure>
+        {% endfor %}
+      </div>
     </section>
     {% endfor %}
   </div>

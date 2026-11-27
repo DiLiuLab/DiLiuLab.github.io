@@ -26,9 +26,13 @@
     {% elsif page.banner_image %}
     <link rel="preload" href="{{ page.banner_image | relative_url }}" as="image">
     {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&amp;display=swap">
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
   </head>
   <body>
+    {% include icons.html %}
     <a class="skip-link" href="#main">Skip to content</a>
     {% include header.html %}
     <main id="main">

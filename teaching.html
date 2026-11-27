@@ -16,9 +16,9 @@ description: Courses, hands-on molecular models, research mentorship, and scienc
   <div class="course-grid">
     {% for course in site.data.teaching %}
     <article>
-      <p class="eyebrow">{{ course.code }}</p>
+      <p class="course-code">{{ course.code }}</p>
       <h3>{{ course.name }}</h3>
-      <p class="course-terms">{{ course.terms }}</p>
+      <p class="course-terms">{% include icon.html name="calendar" %}<span>{{ course.terms }}</span></p>
       <p>{{ course.description }}</p>
     </article>
     {% endfor %}

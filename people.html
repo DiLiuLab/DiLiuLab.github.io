@@ -14,16 +14,17 @@ description: People in the Di Liu Lab at Arizona State University.
       <h1>A community of molecular designers.</h1>
       <p>Researchers across chemistry, biology, and nanotechnology.</p>
       <div class="profile-links roomy-links">
-        <a href="#mentee-awards">Mentee awards and honors</a>
-        <a href="#directory">People directory</a>
-        <a href="{{ '/photos.html' | relative_url }}">All lab photos</a>
+        <a href="#mentee-awards">{% include icon.html name="award" %}Mentee awards and honors</a>
+        <a href="#directory">{% include icon.html name="users" %}People directory</a>
+        <a href="{{ '/photos.html' | relative_url }}">{% include icon.html name="camera" %}All lab photos</a>
       </div>
     </div>
     {% include page-banner.html %}
   </div>
 </section>
 
-<section class="section section-pad" id="directory">
+<section class="section section-pad" id="directory" aria-labelledby="directory-title">
+  <h2 class="sr-only" id="directory-title">People directory</h2>
   <div class="team-layout">
     {% assign principal_investigators = site.people | where: "group", "principal-investigator" | sort: "order" %}
     {% for person in principal_investigators %}
@@ -34,13 +35,14 @@ description: People in the Di Liu Lab at Arizona State University.
       <div class="avatar-placeholder" aria-hidden="true">{{ person.initials }}</div>
       {% endif %}
       <div>
+        <p class="eyebrow">{{ person.role_label | default: "Principal investigator" }}</p>
         <h3>{{ person.name }}</h3>
         <p class="role">{{ person.role }}</p>
         <p>{{ person.directory_summary }}</p>
         <div class="profile-links">
-          {% if person.profile_enabled %}<a href="{{ person.url | relative_url }}">Lab profile</a>{% endif %}
+          {% if person.profile_enabled %}<a href="{{ person.url | relative_url }}">{% include icon.html name="user" %}Lab profile</a>{% endif %}
           {% for link in person.links %}
-          <a href="{{ link.url }}">{{ link.label }}</a>
+          <a href="{{ link.url }}">{% include link-icon.html label=link.label url=link.url %}{{ link.label }}</a>
           {% endfor %}
         </div>
       </div>
@@ -51,25 +53,32 @@ description: People in the Di Liu Lab at Arizona State University.
       {% for group_key in group_keys %}
       {% assign group_people = site.people | where: "group", group_key | sort: "order" %}
       {% if group_people.size > 0 %}
-      <article>
-        {% case group_key %}
-          {% when "postdoctoral" %}<h3>Postdoctoral researchers</h3>
-          {% when "graduate" %}<h3>PhD students</h3>
-          {% when "masters" %}<h3>Master’s students</h3>
-          {% when "high-school" %}<h3>High-school researchers · SCENE</h3>
-          {% when "visitor" %}<h3>Frequent visitors</h3>
-          {% when "alumni" %}<h3>Alumni and past members</h3>
-          {% when "undergraduate" %}<h3>Undergraduate researchers</h3>
-        {% endcase %}
+      <section class="people-group" aria-labelledby="group-{{ group_key }}">
+        <div class="people-group-header">
+          {% case group_key %}
+            {% when "postdoctoral" %}<h3 id="group-{{ group_key }}">Postdoctoral researchers</h3>
+            {% when "graduate" %}<h3 id="group-{{ group_key }}">PhD students</h3>
+            {% when "masters" %}<h3 id="group-{{ group_key }}">Master’s students</h3>
+            {% when "high-school" %}<h3 id="group-{{ group_key }}">High-school researchers · SCENE</h3>
+            {% when "visitor" %}<h3 id="group-{{ group_key }}">Frequent visitors</h3>
+            {% when "alumni" %}<h3 id="group-{{ group_key }}">Alumni and past members</h3>
+            {% when "undergraduate" %}<h3 id="group-{{ group_key }}">Undergraduate researchers</h3>
+          {% endcase %}
+          <span class="people-count" aria-hidden="true">{{ group_people.size }}</span>
+        </div>
         <ul class="people-list">
           {% for person in group_people %}
-          <li>
-            <span>{% if person.profile_enabled %}<a href="{{ person.url | relative_url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</span>
-            <small>{{ person.directory_detail }}</small>
+          <li class="person-tile{% if person.profile_enabled %} has-profile{% endif %}">
+            {% if person.image %}<img class="person-avatar" src="{{ person.image | relative_url }}" alt="" loading="lazy">{% else %}<span class="person-avatar" aria-hidden="true">{{ person.initials }}</span>{% endif %}
+            <span class="person-info">
+              <span class="person-name">{% if person.profile_enabled %}<a href="{{ person.url | relative_url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</span>
+              <small>{{ person.directory_detail }}</small>
+            </span>
+            {% if person.profile_enabled %}{% include icon.html name="arrow-right" class="tile-arrow" %}{% endif %}
           </li>
           {% endfor %}
         </ul>
-      </article>
+      </section>
       {% endif %}
       {% endfor %}
     </div>
@@ -82,8 +91,8 @@ description: People in the Di Liu Lab at Arizona State University.
     <h2>Guidance that grows into independence.</h2>
     <p>We help trainees formulate questions, design and troubleshoot experiments, analyze evidence, and communicate their work. Fellowship applications, conference presentations, and collaborative projects are part of that development.</p>
     <div class="profile-links roomy-links">
-      <a href="#mentee-awards">Mentee awards and honors</a>
-      <a href="{{ '/news/20261109-trainee-achievements.html' | relative_url }}">Recent trainee achievements</a>
+      <a href="#mentee-awards">{% include icon.html name="award" %}Mentee awards and honors</a>
+      <a href="{{ '/news/20261109-trainee-achievements.html' | relative_url }}">{% include icon.html name="news" %}Recent trainee achievements</a>
     </div>
   </div>
 </section>
@@ -94,20 +103,21 @@ description: People in the Di Liu Lab at Arizona State University.
     <h2>Mentee awards and honors</h2>
     <p>Celebrating awards, fellowships, scholarships, and selected conference presentations by current and former lab members.</p>
   </div>
-  <div class="detail-shell">
+  <div class="awards-timeline">
     {% assign lab_awards = site.data.mentee_awards | where: 'group', 'lab' %}
     {% assign award_years = lab_awards | group_by: 'year' | sort: 'name' | reverse %}
     {% for year in award_years %}
-    <article class="detail-card">
+    <article class="award-year">
       <h3>{{ year.name }}</h3>
-      <ul>
+      <ul class="award-list">
         {% for award in year.items %}
-        <li><strong>{% assign award_person = site.people | where: 'name', award.name | first %}{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong> — {{ award.award }}</li>
+        {% assign award_person = site.people | where: 'name', award.name | first %}
+        <li>{% include icon.html name="award" %}<div><strong>{% if award_person.profile_enabled %}<a href="{{ award_person.url | relative_url }}">{{ award.name }}</a>{% else %}{{ award.name }}{% endif %}</strong><span>{{ award.award }}</span></div></li>
         {% endfor %}
       </ul>
     </article>
     {% endfor %}
-    <article class="detail-card">
+    <article class="award-note">
       <h3>Mentees in collaborating laboratories</h3>
       <p>Awards and honors of mentees in collaborating laboratories.</p>
       <ul>

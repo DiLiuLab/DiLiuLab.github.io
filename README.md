@@ -53,6 +53,21 @@ newest first. Add photos through `_data/photos.yml` or the Photos form in Pages 
 Keep only the latest group photo in the People banner and link to the archive for
 earlier years.
 
+## Design system
+
+- `styles.css` is organized into numbered sections. Colors, fonts, radii, shadows,
+  and spacing are defined once as custom properties in `:root`.
+- Headings use Newsreader and body text uses Inter, both loaded from Google Fonts
+  in `_layouts/default.html`. System fonts are used if Google Fonts is unavailable.
+- `_includes/logo-mark.html` is the inline D/L monogram used in the header and
+  footer. It matches `assets/favicon-v5.svg`.
+- `_includes/icons.html` holds the line-icon sprite. Insert an icon with
+  `{% include icon.html name="helix" %}`. `link-icon.html` picks icons for profile
+  links from their labels, and `research-icon.html` picks icons for research
+  directions from their titles, so new CMS entries receive a sensible icon.
+- `assets/hero-art.webp` is an optimized crop of `assets/nucleic-acid-hero.png`
+  used as the decorative artwork in page headers.
+
 ## Local Preview
 
 Build with the GitHub Pages-compatible Jekyll version:
