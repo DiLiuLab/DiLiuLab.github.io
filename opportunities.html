@@ -1,13 +1,20 @@
 ---
 layout: default
 title: Join
+banner_image: /assets/banners/lab-group-2025.webp
+banner_alt: Lab members smiling and waving together at the fall 2025 lab symposium.
+banner_caption: Fall 2025 · Lab symposium
+banner_class: group-photo-2025
 description: Openings and research opportunities in the Di Liu Lab.
 ---
-<section class="page-hero section-pad" id="top">
-  <div class="section-heading compact-heading">
-    <p class="eyebrow">Join us</p>
-    <h1>{{ site.data.opportunities.title }}</h1>
-    <p>{{ site.data.opportunities.introduction }}</p>
+<section class="page-hero photo-hero section-pad" id="top">
+  <div class="photo-hero-inner">
+    <div class="section-heading compact-heading">
+      <p class="eyebrow">Join us</p>
+      <h1>{{ site.data.opportunities.title }}</h1>
+      <p>{{ site.data.opportunities.introduction }}</p>
+    </div>
+    {% include page-banner.html %}
   </div>
 </section>
 <section class="section section-pad tinted">

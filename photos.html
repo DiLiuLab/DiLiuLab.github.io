@@ -1,0 +1,36 @@
+---
+layout: default
+title: Photos
+description: Group photos, lab symposiums, and group dinners from the Di Liu Lab at Arizona State University.
+banner_image: /assets/banners/lab-group-2026.webp
+---
+{% assign photo_years = site.data.photos | group_by: 'year' | sort: 'name' | reverse %}
+<section class="page-hero photos-hero section-pad" id="top">
+  <div class="section-heading compact-heading">
+    <p class="eyebrow">Photos</p>
+    <h1>Life in the lab.</h1>
+    <p>Group photos and shared moments from our lab community.</p>
+    <nav class="profile-links roomy-links" aria-label="Photo years">
+      {% for year in photo_years %}
+      <a href="#photos-{{ year.name }}">{{ year.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</section>
+<section class="section section-pad photo-archive" aria-label="Lab photo archive">
+  <div class="photo-archive-list">
+    {% for year in photo_years %}
+    <section class="photo-year" id="photos-{{ year.name }}" aria-labelledby="photo-year-{{ year.name }}">
+      <h2 id="photo-year-{{ year.name }}">{{ year.name }}</h2>
+      {% for photo in year.items %}
+      <figure class="archive-photo">
+        <a href="{{ photo.image | relative_url }}" aria-label="View full photo: {{ photo.title | escape }}, {{ photo.year }}">
+          <img src="{{ photo.image | relative_url }}" alt="{{ photo.alt | escape }}" width="2400" height="1800"{% if forloop.parentloop.first and forloop.first %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
+        </a>
+        <figcaption>{{ photo.title }} <span>· {{ photo.year }}</span></figcaption>
+      </figure>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </div>
+</section>

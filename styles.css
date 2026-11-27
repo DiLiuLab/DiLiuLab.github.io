@@ -900,3 +900,151 @@ html { scroll-padding-top: 6rem; }
 .publication-title a { text-decoration-color: var(--asu-gold); text-underline-offset: 4px; }
 
 .software-home { margin-top: 3rem; margin-bottom: 0; }
+
+/* Real page imagery shares one frame; headings stay clear of faces and figures. */
+.photo-hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background: var(--soft);
+}
+
+.photos-hero {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.photos-hero .section-heading {
+  margin-bottom: 0;
+}
+
+.photo-archive {
+  padding-top: 3rem;
+}
+
+.photo-archive-list {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 4rem;
+}
+
+.photo-year h2 {
+  margin-bottom: 1.5rem;
+  color: var(--asu-maroon);
+  font-size: 2.25rem;
+}
+
+.archive-photo {
+  margin: 0;
+  border-top: 3px solid var(--asu-gold);
+  background: var(--soft);
+}
+
+.archive-photo + .archive-photo {
+  margin-top: 2rem;
+}
+
+.archive-photo a {
+  display: block;
+}
+
+.archive-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.archive-photo figcaption {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  font-weight: 600;
+}
+
+.archive-photo figcaption span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.photo-hero-inner {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.photo-hero .section-heading {
+  width: 100%;
+  margin: 0;
+}
+
+.photo-hero h1 {
+  font-size: clamp(2.5rem, 3.6vw, 3.5rem);
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.photo-hero .eyebrow {
+  color: var(--asu-maroon);
+  font-size: 0.78rem;
+  margin-top: 0;
+}
+
+.photo-hero .section-heading > p:last-child {
+  margin-bottom: 0;
+}
+
+.page-banner {
+  min-width: 0;
+  margin: 0;
+  border-top: 3px solid var(--asu-gold);
+  background: #fff;
+}
+
+.page-banner-link {
+  display: block;
+}
+
+.page-banner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+.group-photo-2026 img {
+  object-position: center 70%;
+}
+
+.group-photo-2025 img {
+  object-position: center 25%;
+}
+
+.page-banner figcaption {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.025em;
+}
+
+@media (max-width: 920px) {
+  .photo-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-hero .section-heading {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 640px) {
+  .photo-hero {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .photo-hero h1 {
+    font-size: clamp(2.25rem, 9vw, 3rem);
+  }
+}

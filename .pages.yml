@@ -551,3 +551,26 @@ content:
     - name: note
       label: Mentoring context
       type: text
+  - name: photos
+    label: Photos
+    type: file
+    path: _data/photos.yml
+    format: yaml
+    list: true
+    fields:
+    - name: year
+      label: Year
+      type: number
+      required: true
+    - name: title
+      label: Photo caption
+      type: string
+      required: true
+    - name: image
+      label: Photo
+      type: image
+      required: true
+    - name: alt
+      label: Image description
+      type: text
+      required: true

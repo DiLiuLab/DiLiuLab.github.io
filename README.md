@@ -36,6 +36,23 @@ creation when adding a backdated story.
 The `.pages.yml` file defines the editing forms. Layout and navigation are kept
 in `_layouts/` and `_includes/` so routine edits cannot alter the site structure.
 
+## Photo banners
+
+People uses the supplied fall 2026 group photo (`IMG_7297.JPG`), and Join uses the
+supplied fall 2025 group photo (`23051756488163_.pic_hd-less_serious.jpg`). Optimized
+copies are in `assets/banners/`; the original files remain untouched. CSS crops the
+display vertically while retaining the full photo width so every face stays in
+view. Clicking a photo opens the complete image.
+
+The shared `_includes/page-banner.html` and `.photo-hero` styles keep captions,
+framing, and responsive layout consistent. Page front matter provides
+`banner_image`, `banner_alt`, `banner_caption`, and `banner_class`.
+
+`photos.html` is the dedicated photo archive, with full images grouped by year,
+newest first. Add photos through `_data/photos.yml` or the Photos form in Pages CMS.
+Keep only the latest group photo in the People banner and link to the archive for
+earlier years.
+
 ## Local Preview
 
 Build with the GitHub Pages-compatible Jekyll version:

@@ -1,0 +1,6 @@
+<figure class="page-banner {{ page.banner_class }}">
+  <a class="page-banner-link" href="{{ page.banner_image | relative_url }}" aria-label="View full group photo: {{ page.banner_caption | escape }}">
+    <img src="{{ page.banner_image | relative_url }}" alt="{{ page.banner_alt | escape }}" width="2400" height="1800" fetchpriority="high">
+  </a>
+  <figcaption>{{ page.banner_caption }}</figcaption>
+</figure>
